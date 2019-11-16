@@ -1,30 +1,28 @@
 class HighlightsController < ApplicationController
   before_action :set_highlight, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
-  # GET /highlights
-  # GET /highlights.json
   def index
     @highlights = Highlight.all
   end
 
-  # GET /highlights/1
-  # GET /highlights/1.json
   def show
   end
 
-  # GET /highlights/new
   def new
     @highlight = Highlight.new
   end
 
-  # GET /highlights/1/edit
   def edit
   end
 
-  # POST /highlights
-  # POST /highlights.json
   def create
-    @highlight = Highlight.new(highlight_params)
+    puts 'create'
+    puts highlight_params
+    params = JSON::parse(request.params)
+    @highlight = Highlight.new(params)
+
+    
 
     respond_to do |format|
       if @highlight.save
@@ -37,8 +35,6 @@ class HighlightsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /highlights/1
-  # PATCH/PUT /highlights/1.json
   def update
     respond_to do |format|
       if @highlight.update(highlight_params)
@@ -51,8 +47,6 @@ class HighlightsController < ApplicationController
     end
   end
 
-  # DELETE /highlights/1
-  # DELETE /highlights/1.json
   def destroy
     @highlight.destroy
     respond_to do |format|
@@ -62,13 +56,11 @@ class HighlightsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_highlight
       @highlight = Highlight.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def highlight_params
-      params.require(:highlight).permit(:text, :url)
+      params.require(:highlight).permit.(:text, :url)
     end
 end
