@@ -16,6 +16,9 @@ module RailsApp
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    # include lib directory
+    config.autoload_paths << Rails.root.join('lib')
+
     config.middleware.insert_before 0, Rack::Cors, :debug => true, :logger => (-> { Rails.logger }) do
       allow do
         origins '*'

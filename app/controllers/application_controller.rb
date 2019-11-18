@@ -1,4 +1,9 @@
 class ApplicationController < ActionController::Base
-  require 'http_logger'
-  before_action :authenticate_user!
+  protect_from_forgery with: :exception, unless: :json_request
+  before_action :authenticate_user!, unless: :json_request
+
+  protected
+  def json_request
+    request.format.json?
+  end
 end
