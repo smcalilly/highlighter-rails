@@ -1,5 +1,3 @@
 class ApplicationController < ActionController::Base
-  if Rails.env.development?
-    require 'http_logger'
-  end
+  require 'http_logger'
 end

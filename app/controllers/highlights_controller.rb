@@ -1,6 +1,7 @@
 class HighlightsController < ApplicationController
   before_action :set_highlight, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token
+  wrap_parameters format: [:json]
 
   def index
     @highlights = Highlight.all
@@ -18,9 +19,12 @@ class HighlightsController < ApplicationController
 
   def create
     puts 'create'
+    puts request.params
+    # pp request
     puts highlight_params
-    params = JSON::parse(request.params)
-    @highlight = Highlight.new(params)
+    
+    # params = JSON::parse(request.params)
+    @highlight = Highlight.new(highlight_params)
 
     
 
@@ -61,6 +65,8 @@ class HighlightsController < ApplicationController
     end
 
     def highlight_params
-      params.require(:highlight).permit.(:text, :url)
+      puts 'highlight_params'
+      puts request.params
+      params.require(:highlight).permit(:text, :url)
     end
 end
