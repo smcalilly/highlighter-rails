@@ -1,6 +1,11 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # devise mailer
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # Configure the mailer to create full URLs in emails
+  #config.action_mailer.default_url_options = {host: ENV["MAILER_HOST"]}
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.

@@ -1,0 +1,13 @@
+SITE_NAME:        "Highlighter"
+TAGLINE:          "Highlight passages from your favorite reading moments."
+SITE_URL:         "https://www.high-lighter.herokuapp.com"
+SUPPORT_EMAIL:    "smcalilly@gmail.com"
+
+development:
+  SITE_DOMAIN: "localhost:3000"
+  MAILER_HOST: "localhost:3000"
+test:
+  MAILER_HOST: "localhost:3000"
+production:
+  SITE_DOMAIN: "high-lighter.herokuapp.com"
+  MAILER_HOST: "high-lighter.herokuapp.com"
