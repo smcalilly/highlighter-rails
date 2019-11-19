@@ -1,6 +1,5 @@
-class HighlightsController < ApiBaseController
+class HighlightsController < ApplicationController
   before_action :set_highlight, only: [:show, :edit, :update, :destroy]
-  #skip_before_action :verify_authenticity_token
   wrap_parameters format: [:json]
 
   def index
@@ -18,15 +17,7 @@ class HighlightsController < ApiBaseController
   end
 
   def create
-    puts 'create'
-    puts request.params
-    # pp request
-    puts highlight_params
-    
-    # params = JSON::parse(request.params)
     @highlight = Highlight.new(highlight_params)
-
-    
 
     respond_to do |format|
       if @highlight.save
