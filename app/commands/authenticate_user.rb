@@ -2,6 +2,9 @@ class AuthenticateUser
   prepend SimpleCommand
 
   def initialize(email, password)
+    puts 'initialize'
+    puts email
+    puts password
     @email = email
     @password = password
   end
@@ -15,10 +18,10 @@ class AuthenticateUser
 
   def user
     puts 'authenticate user'
-    user = User.find_by_email(email)
+    user = User.find_by(email: email)
     puts user
-    puts email
-    puts password
+    puts :email
+    puts :password
     puts '@@@'
     puts @email
     puts @password

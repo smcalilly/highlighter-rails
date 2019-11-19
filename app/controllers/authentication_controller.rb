@@ -5,12 +5,14 @@ class AuthenticationController < ApplicationController
   def authenticate
     puts 'authenticate'
     puts params
-    command = AuthenticateUser.call(params[:email], params[:password])
+    puts params[:user][:email]
+    puts params[:user][:password]
+    command = AuthenticateUser.call(params[:user][:email], params[:user][:password])
 
     if command.success?
       render json: { auth_token: command.result }
     else
-      render json: { error: command.errors }, status: unauthorized
+      render json: { error: command.errors }, status: 401
     end
   end
 end
