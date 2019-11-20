@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include Pundit
   protect_from_forgery unless: -> { request.format.json? }
   before_action :authenticate_request, if: :json_request
   before_action :authenticate_user!, unless: :json_request

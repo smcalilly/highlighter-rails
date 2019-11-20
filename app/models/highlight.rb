@@ -1,6 +1,8 @@
 class Highlight < ApplicationRecord
   validates :text, :url, presence: true
 
+  belongs_to :user
+
   # TODO -- add regex on url
   ## strip it of https www
   # def test_domain_format

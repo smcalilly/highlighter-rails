@@ -3,14 +3,20 @@ class HighlightsController < ApplicationController
   wrap_parameters format: [:json]
 
   def index
-    @highlights = Highlight.all
+    @highlights = policy_scope(Highlight)
+    authorize @highlights
   end
 
   def show
+    @highlight = policy_scope(Highlight).find(params[:id])
+
+  rescue
+    redirect_to highlights_path, notice: "that highlight doesn't exist."
   end
 
   def new
     @highlight = Highlight.new
+    authorize @highlight
   end
 
   def edit
@@ -18,6 +24,8 @@ class HighlightsController < ApplicationController
 
   def create
     @highlight = Highlight.new(highlight_params)
+    @highlight.user = current_user
+    authorize @highlight
 
     respond_to do |format|
       if @highlight.save
@@ -44,6 +52,8 @@ class HighlightsController < ApplicationController
 
   def destroy
     @highlight.destroy
+    authorize @highlight
+
     respond_to do |format|
       format.html { redirect_to highlights_url, notice: 'Highlight was successfully destroyed.' }
       format.json { head :no_content }
@@ -53,11 +63,13 @@ class HighlightsController < ApplicationController
   private
     def set_highlight
       @highlight = Highlight.find(params[:id])
+      authorize @highlight
+
+    rescue
+      redirect_to highlights_path, notice: "that highlight doesn't exist."
     end
 
     def highlight_params
-      puts 'highlight_params'
-      puts request.params
       params.require(:highlight).permit(:text, :url)
     end
 end
