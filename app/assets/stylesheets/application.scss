@@ -16,6 +16,11 @@
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
 
+ a:hover, a:focus {
+  text-decoration: underline;
+  color: #fcfc60;
+ }
+
  .loginForm {
   display: flex;
   flex-direction: column;
