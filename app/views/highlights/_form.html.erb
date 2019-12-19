@@ -1,4 +1,4 @@
-<%= form_with(model: highlight, local: true) do |form| %>
+<%= form_with(model: @highlight) do |form| %>
   <% if highlight.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(highlight.errors.count, "error") %> prohibited this highlight from being saved:</h2>

@@ -1,0 +1,20 @@
+<p>
+  <strong>Title:</strong>
+  <%= @source.title %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @source.location %>
+</p>
+
+<div>
+  <% @highlights.each do |highlight| %>
+    <tr>
+      <td><%= highlight.text %></td>
+      <td><%= highlight.created_at %></td>
+    </tr>
+  <% end %>
+</div>
+
+<%= link_to 'Back', sources_path %>

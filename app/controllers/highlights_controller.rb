@@ -8,10 +8,7 @@ class HighlightsController < ApplicationController
   end
 
   def show
-    @highlight = policy_scope(Highlight).find(params[:id])
-
-  rescue
-    redirect_to highlights_path, notice: "that highlight doesn't exist."
+    authorize @highlight
   end
 
   def new
@@ -23,16 +20,14 @@ class HighlightsController < ApplicationController
   end
 
   def create
-    @highlight = Highlight.new(highlight_params)
-    @highlight.user = current_user
-    authorize @highlight
+    @highlight = create_highlight
 
     respond_to do |format|
       if @highlight.save
         format.html { redirect_to @highlight, notice: 'Highlight was successfully created.' }
         format.json { render :show, status: :created, location: @highlight }
       else
-        format.html { render :new }
+        format.html { render :new, flash: 'Failure' }
         format.json { render json: @highlight.errors, status: :unprocessable_entity }
       end
     end
@@ -62,14 +57,29 @@ class HighlightsController < ApplicationController
 
   private
     def set_highlight
-      @highlight = Highlight.find(params[:id])
-      authorize @highlight
+      @highlight = policy_scope(Highlight).find(params[:id])
 
     rescue
       redirect_to highlights_path, notice: "that highlight doesn't exist."
     end
 
     def highlight_params
-      params.require(:highlight).permit(:text, :url)
+      params.require(:highlight).permit(:text, :url, :source_id)
+    end
+
+    def create_highlight
+      source_params = {
+        user_id: current_user.id,
+        location: highlight_params[:url],
+        title: highlight_params[:url]
+      }
+
+      @source = Source.find_or_create_by(source_params)
+      authorize @source
+  
+      @highlight = Highlight.new(highlight_params)
+      @highlight.user = current_user
+      @highlight.source = @source
+      authorize @highlight
     end
 end

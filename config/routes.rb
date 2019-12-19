@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root to: "highlights#index"
   
   resources :highlights
+  resources :sources, only: [:index, :show, :new, :create, :destroy]
 end

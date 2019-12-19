@@ -1,0 +1,5 @@
+  <div class="field">
+    <%= form.nested_fields_for :source do |source_form| %>
+      <%= source_form.text_area :location %>
+    <% end %>
+  </div>
