@@ -2,12 +2,10 @@ class SourcesController < ApplicationController
 	before_action :set_source, only: [:show, :destroy]
 
     def index
-				@sources = policy_scope(Source)
-				authorize @sources
+			@sources = policy_scope(Source)
 		end
 		
 		def show
-			authorize @source
 			@highlights = Highlight.where(source_id: @source)
 		rescue
 			redirect_to sources_path, notice: "that source doesn't exist"
@@ -15,12 +13,11 @@ class SourcesController < ApplicationController
 
 		def new
 			@source = Source.new
-			authorize @source
 		end
 
 		def create
 			@source = Source.new(source_params)
-			@source.user_id = current_user.id
+			@source.user = current_user
 			authorize @source
 
     	respond_to do |format|
@@ -46,7 +43,6 @@ class SourcesController < ApplicationController
 		private
 			def set_source
 				@source = policy_scope(Source).find(params[:id])
-	
 			rescue
 				redirect_to sources_path, notice: "that source doesn't exist."
 			end

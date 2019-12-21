@@ -1,19 +1,17 @@
 class HighlightsController < ApplicationController
   before_action :set_highlight, only: [:show, :edit, :update, :destroy]
+  #before_action :make_sure_highlight_portion_doesn't_exist -- maybe find or create by for the highlight create method to?
   wrap_parameters format: [:json]
 
   def index
     @highlights = policy_scope(Highlight)
-    authorize @highlights
   end
 
   def show
-    authorize @highlight
   end
 
   def new
     @highlight = Highlight.new
-    authorize @highlight
   end
 
   def edit
@@ -47,7 +45,6 @@ class HighlightsController < ApplicationController
 
   def destroy
     @highlight.destroy
-    authorize @highlight
 
     respond_to do |format|
       format.html { redirect_to highlights_url, notice: 'Highlight was successfully destroyed.' }
@@ -58,13 +55,12 @@ class HighlightsController < ApplicationController
   private
     def set_highlight
       @highlight = policy_scope(Highlight).find(params[:id])
-
     rescue
       redirect_to highlights_path, notice: "that highlight doesn't exist."
     end
 
     def highlight_params
-      params.require(:highlight).permit(:text, :url, :source_id)
+      params.require(:highlight).permit(:text, :url)
     end
 
     def create_highlight

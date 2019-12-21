@@ -1,0 +1,10 @@
+tests
+-- controllers
+    highlights: source ids in the fixtures?
+    api tests for highlights
+    sources
+    user / devise
+-- helpers
+    jwt
+-- models
+-- system? after i update the ui?

@@ -1,9 +1,12 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  user_id: 2020
   text: The grandmother thought something felt funny.
   url: www.a-good-man-is-hard-to-find.com
+  
 
 two:
+  user_id: 237
   text: The universe cavorts around and I'm spinning out.
   url: www.sanctimony.com
