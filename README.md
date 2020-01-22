@@ -1,4 +1,4 @@
 # highlighter
-this rails app saves "highlights" or selected passages while reading on the internet. the highlights are sent from this chrome browser extension: https://github.com/smcalilly/highlighter-chrome
+This rails app saves "highlights", aka selected passages of text, while reading online. The highlights are sent from this Chrome browser extension: https://github.com/smcalilly/highlighter-chrome
 
-i recently added jwt authentication system so a user can save the highlight from the chrome client to an account in the rails app. need to change the client authentication to a more secure setup via omniauth.
+The Chrome client authenticates to the Rails API with a JWT. The user's data is siloed and independent of other users' data.
