@@ -1,29 +1,20 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"></p>
 
-<h1 id="underline">Highlights</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Text</th>
-      <th>Url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @highlights.each do |highlight| %>
-      <tr>
-        <td><%= highlight.text %></td>
-        <td><%= highlight.url %></td>
-        <td><%= link_to 'Show', highlight %></td>
-        <td><%= link_to 'Edit', edit_highlight_path(highlight) %></td>
-        <td><%= link_to 'Destroy', highlight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<div class="page centerColumnFlex">
+  <h1 id="underline">Highlights</h1>
+  <div>
+  <% @highlights.each do |highlight| %>
+    <div class="highlight">
+      <%= highlight.text %>
+      <br/>
+      <%= link_to highlight.url %>
+      <div>
+        <%= link_to 'Show', highlight %>
+        <%= link_to 'Destroy', highlight, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+  <% end %>
+</div>
+</div>
 
 <%= link_to 'New Highlight', new_highlight_path %>

@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'webmock/minitest'
 
 class HighlightsControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
@@ -7,17 +8,23 @@ class HighlightsControllerTest < ActionDispatch::IntegrationTest
     @unauthorized_highlight = highlights(:two)
   end
 
-  def login_user
+  def login_user_via_ui
     get '/users/sign_in'
     sign_in users(:obama)
     post user_session_url
-    @unauthorized_highlight
+  end
+
+  def login_user_via_extension
+    # log in with json post and return jwt
   end
 
   test "should test chrome client" do
     #test login
     #test jwt
     #test highlight creation
+
+    
+    #save highlight
   end
 
   test "should not get index" do
@@ -26,21 +33,15 @@ class HighlightsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/users/sign_in'
 
     # multi-tenancy: should not get anything from another user
-    login_user
+    login_user_via_ui
     get highlight_url(@unauthorized_highlight)
     assert_redirected_to highlights_url
   end
 
   test "should get index" do
-    # as a user
-    login_user
+    login_user_via_ui
     get highlights_url
     assert_response :success
-
-    # multi-tenancy: should not get anything from another user
-    login_user
-    get highlight_url(@unauthorized_highlight)
-    assert_redirected_to highlights_url
   end
 
   test "should not get new" do
@@ -50,8 +51,7 @@ class HighlightsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    # as a user
-    login_user
+    login_user_via_ui
     get new_highlight_url
     assert_response :success
   end
@@ -65,9 +65,8 @@ class HighlightsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create highlight" do
-    # as a user
-    login_user
-    assert_difference 'Highlight.count', 1 do
+    login_user_via_ui
+    assert_difference [ 'Highlight.count', 'Source.count'], 1 do
       post highlights_url, params: { highlight: { text: @highlight.text, url: @highlight.url } }
     end
     assert_response :redirect
@@ -79,14 +78,13 @@ class HighlightsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/users/sign_in'
 
     # multi-tenancy: should not show anything from another account
-    login_user
+    login_user_via_ui
     get highlight_url(@unauthorized_highlight)
     assert_response :redirect
   end
 
   test "should show highlight" do
-    # as a user
-    login_user
+    login_user_via_ui
     get highlight_url(@highlight)
     assert_response :success
   end
@@ -97,14 +95,14 @@ class HighlightsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/users/sign_in'
 
     # multi-tenancy: should not show anything from another account
-    login_user
+    login_user_via_ui
     get edit_highlight_url(@unauthorized_highlight)
     assert_redirected_to highlights_url
   end
 
   test "should get edit" do
     # as a user
-    login_user
+    login_user_via_ui
     get edit_highlight_url(@highlight)
     assert_response :success
   end
@@ -115,14 +113,14 @@ class HighlightsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/users/sign_in'
 
     # multi-tenancy: should not show anything from another account
-    login_user
+    login_user_via_ui
     patch highlight_url(@unauthorized_highlight), params: { highlight: { text: @highlight.text, url: @highlight.url } }
     assert_redirected_to highlights_url
   end
 
   test "should update highlight" do
     # as a user
-    login_user 
+    login_user_via_ui 
     patch highlight_url(@highlight), params: { highlight: { text: @highlight.text, url: @highlight.url } }
     assert_response :success
   end
@@ -135,7 +133,7 @@ class HighlightsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/users/sign_in'
 
     # multi-tenancy: should not delete anything from another account
-    login_user
+    login_user_via_ui
     assert_difference('Highlight.count', 0) do
       delete highlight_url(@unauthorized_highlight)
     end
@@ -144,7 +142,7 @@ class HighlightsControllerTest < ActionDispatch::IntegrationTest
 
   test "should destroy highlight" do
     # as a user
-    login_user 
+    login_user_via_ui 
     assert_difference('Highlight.count', -1) do
       delete highlight_url(@highlight)
     end

@@ -1,23 +1,13 @@
-<nav class="navbar navbar-inverse">
-  <div class="container">
+<nav class="bannerApp">
+  <h1><%= link_to 'Highlighter', root_path, class: 'brand' %></h1>
 
-    <div class="navbar-header">
-      <%= link_to 'Highlighter', root_path, class: 'navbar-brand', id: 'underline' %>
+  <div id="dropdownMenu">
+    <% if user_signed_in? %>
+      <%= current_user.email %>
+      <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Log In', new_user_session_path %>
+      <%= link_to 'Sign Up', new_user_registration_path %>
+      <% end %>
     </div>
-
-    <div id="navbar" style="border-radius: 0px">
-    <ul class="nav navbar-nav pull-right">
-      <li><% link_to 'Home', root_path %></li>
-      <ul class="nav navbar-nav pull-right" id="centerItemHorizontally">
-        <% if user_signed_in? %>
-        <li style="color: #fff"><%= current_user.email %></li>
-        <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to 'Log In', new_user_session_path %></li>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-        <% end %>
-      </ul>
-    </ul>
-
-  </div>
 </nav>

@@ -13,8 +13,6 @@
  *= require_tree .
  *= require_self
  */
- @import 'bootstrap-sprockets';
- @import 'bootstrap';
 
  a:hover, a:focus {
   text-decoration: underline;
@@ -43,7 +41,7 @@
   align-items: center;
  }
 
- #centerColumnFlex {
+ .centerColumnFlex {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,4 +50,63 @@
  #underline {
   text-decoration: underline;
   text-decoration-color: #fcfc60;
+ }
+
+ .highlighterYellow {
+   color: #fcfc60;
+ }
+
+ .page {
+   width: 60%
+ }
+
+ .container-fluid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .bannerApp {
+  background: #fcfc60;
+  width: 100%;
+  height: 50px;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #333333;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.bannerExtension {
+  background: #fcfc60;
+  width: 100%;
+  height: 50px;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333333;
+  border-radius: 3px;
+}
+
+.brand {
+  
+}
+
+a {
+  color: #333;
+
+  &:hover {
+    color: #fff;
+    background-color: #333;
+  }
+}
+
+#dropdownMenu {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
  }

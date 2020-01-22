@@ -3,10 +3,6 @@ class AuthenticationController < ApplicationController
   skip_before_action :authenticate_request
 
   def authenticate
-    puts 'authenticate'
-    puts params
-    puts params[:user][:email]
-    puts params[:user][:password]
     command = AuthenticateUser.call(params[:user][:email], params[:user][:password])
 
     if command.success?
