@@ -13,10 +13,14 @@
   <body>
     <%= render 'layouts/navigation' %>
 
-    <div id='flash'>
+    <div id='center-item-vertically'>
       <% flash.each do |key, value|%>
       <div class="flash <%= key %>">
         <%= value %>
+
+      <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+        <span aria-hidden='true'>&times;</span>
+      </button>
       </div>
       <% end %>
     </div>

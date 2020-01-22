@@ -14,24 +14,37 @@
  *= require_self
  */
 
+ a {
+  color: #333;
+
+  &:hover {
+    color: #fff;
+    background-color: #333;
+  }
+}
+
  a:hover, a:focus {
   text-decoration: underline;
   color: #fcfc60;
  }
 
- .loginForm {
+ .login-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 300px;
+  border: solid 1px #333;
+  border-radius: 3px;
+  margin: 25px;
  }
 
- .loginButton {
+ .login-button {
   margin: 15px;
   width: 80px;
 }
 
- #centerItemVertically {
+ #center-item-vertically {
    display: flex;
    justify-content: center;
  }
@@ -41,7 +54,7 @@
   align-items: center;
  }
 
- .centerColumnFlex {
+ .center-column-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +65,7 @@
   text-decoration-color: #fcfc60;
  }
 
- .highlighterYellow {
+ .highlighter-yellow {
    color: #fcfc60;
  }
 
@@ -67,7 +80,7 @@
   align-items: center;
  }
 
- .bannerApp {
+ .banner-app {
   background: #fcfc60;
   width: 100%;
   height: 50px;
@@ -80,7 +93,7 @@
   padding: 10px;
 }
 
-.bannerExtension {
+.banner-extension {
   background: #fcfc60;
   width: 100%;
   height: 50px;
@@ -92,21 +105,15 @@
   border-radius: 3px;
 }
 
-.brand {
-  
-}
 
-a {
-  color: #333;
-
-  &:hover {
-    color: #fff;
-    background-color: #333;
-  }
-}
-
-#dropdownMenu {
+.flash {
+  margin-top: 25px;
+  background-color: orangered;
+  width: 200px;
+  height: 35px;
   display: flex;
-  flex-direction: column;
-  text-align: right;
- }
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 3px;
+}
