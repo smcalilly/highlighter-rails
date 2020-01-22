@@ -13,8 +13,9 @@
   <body>
     <%= render 'layouts/navigation' %>
 
-    <div id='center-item-vertically'>
+    
       <% flash.each do |key, value|%>
+      <div id='center-item-vertically'>
       <div class="flash <%= key %>">
         <%= value %>
 
@@ -22,10 +23,11 @@
         <span aria-hidden='true'>&times;</span>
       </button>
       </div>
+      </div>
       <% end %>
-    </div>
+    
 
-    <div class="container-fluid">
+    <div class="page">
       <%= yield %>
     </div>
   </body>

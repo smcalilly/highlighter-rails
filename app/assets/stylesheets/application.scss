@@ -16,6 +16,8 @@
 
  a {
   color: #333;
+  text-decoration: underline;
+  text-decoration-color: #fcfc60;
 
   &:hover {
     color: #fff;
@@ -23,10 +25,32 @@
   }
 }
 
- a:hover, a:focus {
+a:hover, a:focus {
   text-decoration: underline;
   color: #fcfc60;
- }
+}
+
+p {
+  font-family: 'Times New Roman';
+  font-size: 1.1875rem;
+  line-height: 1.8125rem;
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  background-color: aliceblue;
+}
+
+#notice {
+  color: green;
+}
 
  .login-container {
   display: flex;
@@ -44,17 +68,7 @@
   width: 80px;
 }
 
- #center-item-vertically {
-   display: flex;
-   justify-content: center;
- }
-
- #centerItemHorizontally {
-  display: flex;
-  align-items: center;
- }
-
- .center-column-flex {
+ #center-column-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,15 +79,20 @@
   text-decoration-color: #fcfc60;
  }
 
+ #center-item-vertically {
+  display: flex;
+  justify-content: center;
+}
+
  .highlighter-yellow {
    color: #fcfc60;
  }
 
- .page {
+ .container {
    width: 60%
  }
 
- .container-fluid {
+ .page {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,7 +101,6 @@
 
  .banner-app {
   background: #fcfc60;
-  width: 100%;
   height: 50px;
   color: #333333;
   display: flex;
@@ -105,7 +123,6 @@
   border-radius: 3px;
 }
 
-
 .flash {
   margin-top: 25px;
   background-color: orangered;
@@ -116,4 +133,46 @@
   align-items: center;
   padding: 10px;
   border-radius: 3px;
+}
+
+#error-explanation {
+  margin: 0 auto;
+  width: 75%;
+  border: 2px solid orangered;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: orangered;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: orangered;
+  display: table;
+}
+
+.header-highlight-index {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+#text-align-center {
+  text-align: center;
 }

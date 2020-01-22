@@ -1,20 +1,24 @@
-<p id="notice"></p>
+<%= notice %>
 
-<div class="page center-column-flex">
-  <h1 id="underline">Highlights</h1>
+<div class="container">
+  <div class="header-highlight-index">
+    <h1>Highlights</h1>
+    <%= link_to 'New Highlight', new_highlight_path %>
+  </div>
+
   <div>
-  <% @highlights.each do |highlight| %>
-    <div class="highlight">
-      <%= highlight.text %>
-      <br/>
-      <%= link_to highlight.url %>
-      <div>
-        <%= link_to 'Show', highlight %>
-        <%= link_to 'Destroy', highlight, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% @highlights.each do |highlight| %>
+      <div class="highlight">
+        <p><%= highlight.text %></p>
+        <br/>
+      
+        <div class="highlight-footer">
+          <%= link_to highlight.url, highlight.url,  target: :_blank %>
+          <%= link_to 'Show', highlight %>
+        </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
 </div>
 
-<%= link_to 'New Highlight', new_highlight_path %>
+

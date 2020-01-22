@@ -3,8 +3,31 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .highlight {
-  margin: 20px;
-  padding: 10px;
+  margin-bottom: 20px;
+  padding: 30px;
   border: 1px solid #333;
   border-radius: 5px;
+  background-color: #fff;
+}
+
+.highlight-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.show-highlight {
+  margin-top: 50px;
+}
+
+.show-highlight-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.view-source {
+  text-align: center;
+  //margin-left: 80px;
 }

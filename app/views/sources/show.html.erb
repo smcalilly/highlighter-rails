@@ -1,20 +1,18 @@
-<p>
-  <strong>Title:</strong>
-  <%= @source.title %>
-</p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @source.location %>
-</p>
 
-<div>
+<div class="highlight show-highlight container">
+<div class="view-source">
+    <h3><%= link_to @source.location, @source.location,  target: :_blank %></h3>
+    <br/>
+</div>
   <% @highlights.each do |highlight| %>
-    <tr>
-      <td><%= highlight.text %></td>
-      <td><%= highlight.created_at %></td>
-    </tr>
+    <p><%= highlight.text %></p>
+    <div id="text-align-center">
+      <%= highlight.created_at %>
+    </div>
   <% end %>
+  <%= link_to 'Back', sources_path %>
 </div>
 
-<%= link_to 'Back', sources_path %>
+
+</div>
