@@ -14,6 +14,17 @@
  *= require_self
  */
 
+ body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  background-color: aliceblue;
+}
+
+p {
+  font-family: 'Times New Roman';
+}
+
  a {
   color: #333;
   text-decoration: underline;
@@ -30,22 +41,6 @@ a:hover, a:focus {
   color: #fcfc60;
 }
 
-p {
-  font-family: 'Times New Roman';
-  // font-size: 1.1875rem;
-  // line-height: 1.8125rem;
-  // width: 600px;
-  // margin: 0 auto;
-  // margin-bottom: 1rem;
-}
-
-
-
-// fluid type -- thank you https://www.madebymike.com.au/writing/fluid-type-calc-examples/ ! <3
-// .fluid-type {
-//   font-size: 0.875rem;
-// }
-
 @media screen and (min-width: 20rem) {
   .fluid-type {
     font-size: calc(0.875rem + 0.5 * ((100vw - 20rem) / 60));
@@ -57,7 +52,7 @@ p {
 
   .highlight-box {
     margin-bottom: 20px;
-    padding: 30px;
+    padding: 20px 30px;
     width: 70%;
   }
 }
@@ -73,7 +68,8 @@ p {
 
   .highlight-box {
     margin-bottom: 20px;
-    padding: 60px;
+    padding: 40px 60px;
+    width: 80%
   }
 
   .box-container {
@@ -87,26 +83,17 @@ p {
   background-color: #fff;
 }
 
-// .molten-leading {
-//   line-height: 1.2em;
-// }
-
 #no-margin {
   margin: 0;
 }
 
-body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  background-color: aliceblue;
-}
+
 
 #notice {
   color: green;
 }
 
- .login-container {
+.login-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,43 +103,41 @@ body {
   border-radius: 3px;
   margin: 25px;
   background-color: #fff;
- }
+}
 
- .login-button {
+.login-button {
   margin: 15px;
   width: 80px;
 }
 
- #center-column-flex {
+#center-column-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
- }
+}
 
- #underline {
+#underline {
   text-decoration: underline;
   text-decoration-color: #fcfc60;
- }
+}
 
- #center-item-vertically {
+#center-item-vertically {
   display: flex;
   justify-content: center;
 }
 
- .highlighter-yellow {
-   color: #fcfc60;
- }
+.highlighter-yellow {
+  color: #fcfc60;
+}
 
- .page {
+.page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
- }
+}
 
-
-
- .banner-app {
+.banner-app {
   background: #fcfc60;
   height: 50px;
   color: #333333;
