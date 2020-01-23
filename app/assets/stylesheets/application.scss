@@ -32,19 +32,73 @@ a:hover, a:focus {
 
 p {
   font-family: 'Times New Roman';
-  font-size: 1.1875rem;
-  line-height: 1.8125rem;
-  width: 600px;
-  margin: 0 auto;
-  margin-bottom: 1rem;
+  // font-size: 1.1875rem;
+  // line-height: 1.8125rem;
+  // width: 600px;
+  // margin: 0 auto;
+  // margin-bottom: 1rem;
+}
+
+
+
+// fluid type -- thank you https://www.madebymike.com.au/writing/fluid-type-calc-examples/ ! <3
+// .fluid-type {
+//   font-size: 0.875rem;
+// }
+
+@media screen and (min-width: 20rem) {
+  .fluid-type {
+    font-size: calc(0.875rem + 0.5 * ((100vw - 20rem) / 60));
+  }
+
+  .molten-leading {
+    line-height: calc(1.2em + 0.6 * ((100vw - 20em) / 60));
+  }
+
+  .highlight-box {
+    margin-bottom: 20px;
+    padding: 30px;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .fluid-type {
+    font-size: 1.1875rem;
+  }
+
+  .molten-leading {
+    line-height: 1.8125rem;
+  }
+
+  .highlight-box {
+    margin-bottom: 20px;
+    padding: 60px;
+  }
+
+  .box-container {
+    width: 750px;
+  }
+}
+
+.highlight-box {
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+// .molten-leading {
+//   line-height: 1.2em;
+// }
+
+#no-margin {
+  margin: 0;
 }
 
 body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
   background-color: aliceblue;
 }
 
@@ -61,6 +115,7 @@ body {
   border: solid 1px #333;
   border-radius: 3px;
   margin: 25px;
+  background-color: #fff;
  }
 
  .login-button {
@@ -88,16 +143,14 @@ body {
    color: #fcfc60;
  }
 
- .container {
-   width: 60%
- }
-
  .page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
  }
+
+
 
  .banner-app {
   background: #fcfc60;
@@ -144,18 +197,18 @@ body {
   background-color: #f0f0f0;
 
   h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px -7px 0;
-    background-color: orangered;
-    color: #fff;
+    // text-align: left;
+    // font-weight: bold;
+    // padding: 5px 5px 5px 15px;
+    // font-size: 12px;
+    // margin: -7px -7px 0;
+    // background-color: orangered;
+    // color: #fff;
   }
 
   ul li {
-    font-size: 12px;
-    list-style: square;
+    // font-size: 12px;
+    // list-style: square;
   }
 }
 

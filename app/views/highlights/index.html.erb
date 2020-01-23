@@ -1,22 +1,30 @@
 <%= notice %>
 
-<div class="container">
+<div class="page-container">
   <div class="header-highlight-index">
     <h1>Highlights</h1>
     <%= link_to 'New Highlight', new_highlight_path %>
   </div>
 
-  <div>
+  <div class="box-container" id="center-column-flex">
     <% @highlights.each do |highlight| %>
-      <div class="highlight">
-        <p><%= highlight.text %></p>
+      <div class="highlight-box">
+        <p class="fluid-type molten-leading" id="no-margin">
+          <%= highlight.text %>
+        </p>
         <br/>
       
-        <div class="highlight-footer">
-          <%= link_to highlight.url, highlight.url,  target: :_blank %>
-          <%= link_to 'Show', highlight %>
+      <div class="view-source">
+        <strong><%= link_to highlight.url, highlight.url,  target: :_blank %></strong>
+      </div>
+        <div class="show-highlight-footer">
+          
+          <%= link_to 'Show', highlight %> |
+          <%= link_to 'Edit', edit_highlight_path(highlight) %> |
+          <%= link_to 'Delete', highlight, method: :delete, data: { confirm: 'Are you sure?' } %> 
         </div>
       </div>
+      
     <% end %>
   </div>
 </div>
