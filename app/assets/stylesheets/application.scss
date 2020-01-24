@@ -55,6 +55,12 @@ a:hover, a:focus {
     padding: 20px 30px;
     width: 70%;
   }
+
+  .marketing-box {
+    margin-top: 40px;
+    padding: 20px 30px;
+    width: 70%;
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -72,12 +78,18 @@ a:hover, a:focus {
     width: 80%
   }
 
+  .marketing-box {
+    margin-top: 80px;
+    padding: 20px 30px;
+    width: 70%;
+  }
+
   .box-container {
     width: 750px;
   }
 }
 
-.highlight-box {
+.box {
   border: 1px solid #333;
   border-radius: 5px;
   background-color: #fff;

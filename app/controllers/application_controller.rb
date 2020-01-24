@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
     render json: { error: 'Not Authorized' }, status: 401 unless @current_user
   end
 
+  def after_sign_in_path_for(resource)
+    stored_location_for(resource) || highlights_path
+  end
+
   def enable_http_logger
     if Rails.env.development?
       require 'http_logger'
