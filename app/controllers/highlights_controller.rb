@@ -4,7 +4,7 @@ class HighlightsController < ApplicationController
   wrap_parameters format: [:json]
 
   def index
-    @highlights = policy_scope(Highlight)
+    @highlights = policy_scope(Highlight.order(created_at: :desc))
   end
 
   def show
