@@ -1,28 +1,17 @@
-<p id="notice"><%= notice %></p>
+<header class='header-highlight-index'>
+  <h1 class="underline">Sources</h1>
+  <%= link_to 'New Source', new_source_path %>
+</header>
 
-<h1 class="underline">Sources</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>title</th>
-      <th>Location</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @sources.each do |source| %>
-      <tr>
-        <td><%= source.title %></td>
-        <td><%= source.location %></td>
-        <td><%= link_to 'Show', source %></td>
-        <td><%= link_to 'Destroy', source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <section class='highlight-box box'>
+        <div class='source-link'>
+          <strong><%= link_to source.location, source.location, target: :_blank %></strong>
+        </div>
+        <div class='show-highlight-footer'>
+          <%= link_to 'Show', source %> |
+          <%= link_to 'Destroy', source, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </section>
     <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Source', new_source_path %>

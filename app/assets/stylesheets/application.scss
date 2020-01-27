@@ -22,7 +22,8 @@
 }
 
 p {
-  font-family: 'Times New Roman';
+  font-family: Georgia, 'Times New Roman', Georgia, 'Times New Roman', Times, serif;
+  margin: 0px;
 }
 
  a {
@@ -50,7 +51,7 @@ a:hover, a:focus {
   margin-top: 15px;
 }
 
-#login-button {
+.button {
   width: 90px;
   height: 35px;
   border-radius: 10px;
@@ -62,7 +63,7 @@ a:hover, a:focus {
   font-size: 20px;
 }
 
-#login-button:hover, #login-button:focus {
+.button:hover, .button:focus {
   color: #fff;
   background-color: #333;
   cursor: pointer;
@@ -84,11 +85,8 @@ input #user_remember_me {
 }
 
 @media screen and (min-width: 20rem) {
-  .fluid-type {
+  p {
     font-size: calc(0.875rem + 0.5 * ((100vw - 20rem) / 60));
-  }
-
-  .molten-leading {
     line-height: calc(1.2em + 0.6 * ((100vw - 20em) / 60));
   }
 
@@ -104,11 +102,8 @@ input #user_remember_me {
 }
 
 @media screen and (min-width: 750px) {
-  .fluid-type {
+  p {
     font-size: 1.1875rem;
-  }
-
-  .molten-leading {
     line-height: 1.8125rem;
   }
 
@@ -133,7 +128,7 @@ input #user_remember_me {
   background-color: #fff;
 }
 
-#no-margin {
+.no-margin {
   margin: 0;
 }
 
@@ -255,6 +250,6 @@ input #user_remember_me {
   width: 80%
 }
 
-#text-align-center {
+.text-align-center {
   text-align: center;
 }

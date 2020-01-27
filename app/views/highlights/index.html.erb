@@ -2,10 +2,10 @@
     <h1>Highlights</h1>
     <%= link_to 'New Highlight', new_highlight_path %>
   </header>
-  
+
     <% @highlights.each do |highlight| %>
       <section class='highlight-box box'>
-        <p class='fluid-type molten-leading' id='no-margin'>
+        <p>
           <%= highlight.text %>
         </p>
         <div class='view-source'>
