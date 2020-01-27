@@ -1,6 +1,6 @@
 
 
-<div class="highlight show-highlight page-container">
+<section class="highlight show-highlight">
   <div class="view-source">
       <h3><%= link_to @source.location, @source.location,  target: :_blank %></h3>
       <br/>
@@ -8,10 +8,10 @@
   
   <% @highlights.each do |highlight| %>
     <p><%= highlight.text %></p>
-    <div id="text-align-center">
+    <div class="text-align-center">
       <%= highlight.created_at %>
     </div>
   <% end %>
 
   <%= link_to 'Back', sources_path %>
-</div>
+</section>

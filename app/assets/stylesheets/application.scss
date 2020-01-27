@@ -98,10 +98,8 @@ input #user_remember_me {
     width: 70%;
   }
 
-  .marketing-box {
+  .marketing {
     margin-top: 40px;
-    padding: 20px 30px;
-    width: 70%;
   }
 }
 
@@ -120,10 +118,8 @@ input #user_remember_me {
     width: 80%
   }
 
-  .marketing-box {
+  .marketing {
     margin-top: 80px;
-    padding: 20px 30px;
-    width: 70%;
   }
 
   .box-container {
@@ -256,6 +252,7 @@ input #user_remember_me {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  width: 80%
 }
 
 #text-align-center {

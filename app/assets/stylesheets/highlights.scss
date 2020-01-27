@@ -24,11 +24,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .view-source {
   text-align: center;
-  //margin-left: 80px;
-  margin-top: 30px;
+  margin-top: 60px;
+}
+
+.view-more {
+  margin: 60px;
+  text-align: center;
 }

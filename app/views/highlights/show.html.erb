@@ -1,14 +1,15 @@
-<div class="highlight show-highlight page-container">
+<section class="highlight show-highlight">
   <p class="fluid-type molten-leading">
     <%= @highlight.text %>
   </p>
 
-  <div class="view-source">
-    <%= link_to @highlight.url, @highlight.url,  target: :_blank %>
-    <br/>
-    <br/>
-    <%= link_to 'View more highlights', @highlight.source %>  from this source.
-  </div>
+  <aside class="view-source">
+    <strong><%= link_to @highlight.url, @highlight.url,  target: :_blank %></strong>
+  </aside>
+
+  <aside class='view-more'>
+      <%= link_to 'View more highlights', @highlight.source %>  from this source.
+  </aside>
   
   
   
@@ -17,4 +18,4 @@
     <%= link_to 'Delete', @highlight, method: :delete, data: { confirm: 'Are you sure?' } %> |
     <%= link_to 'Back', highlights_path %>
   </div>
-</div>
+</section>
