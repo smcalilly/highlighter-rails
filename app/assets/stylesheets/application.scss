@@ -23,7 +23,6 @@
 
 p {
   font-family: Georgia, 'Times New Roman', Georgia, 'Times New Roman', Times, serif;
-  margin: 0px;
 }
 
  a {
@@ -37,7 +36,7 @@ p {
   }
 }
 
-a:hover, a:focus {
+a:hover {
   text-decoration: underline;
   color: #fcfc60;
 }
@@ -132,6 +131,20 @@ input #user_remember_me {
   margin: 0;
 }
 
+.no-margin-top {
+  margin-top: 0px;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0px;
+}
+
+.sam-n-okie {
+  float: right;
+  width: 30%;
+  padding: 10px;
+}
+
 #notice {
   color: green;
 }
@@ -154,7 +167,7 @@ input #user_remember_me {
   align-items: center;
 }
 
-#underline {
+.underline {
   text-decoration: underline;
   text-decoration-color: #fcfc60;
 }
@@ -253,3 +266,4 @@ input #user_remember_me {
 .text-align-center {
   text-align: center;
 }
+

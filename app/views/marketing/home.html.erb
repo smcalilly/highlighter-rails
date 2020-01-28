@@ -1,6 +1,6 @@
 <section class="highlight-box box marketing">
   <header>
-    <h3 class="text-align-center">
+    <h3 class="text-align-center no-margin-top">
       Readers, writers, forgetful academics<br>
       and the otherwise curious: rejoice!
     </h3>
@@ -8,20 +8,46 @@
 
   <p>
     <strong class="underline" style="font-family: verdana">
-    Highlighter
-    </strong> allows you to save notable quotes 
-    while reading in your web browser.
-    With two easy clicks, your highlights will always 
-    be available to reference whenever you need them.
+    Highlighter</strong> allows you to save notable quotes 
+    while reading in your favorite web browser.
+    No matter what or where you read, your highlights are always 
+    available to reference whenever you need them.
   </p>
+  <br>
+  <div class='text-align-center'>
+    <%= link_to 'Sign up', new_user_registration_path %> and <a href="https://forms.gle/EWhFUiKtR5QgzuRZ7" target="_blank">request a download for V1.</a>
+  </div>
 </section>
 
 <section class="highlight-box box">
-  <p>Watch the demo:</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/VjhEljAnTlg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
 
   <section class="highlight-box box">
-    <%= link_to 'Sign up', new_user_registration_path %> and download the browser extension.
-    <p>Keep on reading!</p>
-    <a href="https://forms.gle/EWhFUiKtR5QgzuRZ7" target="_blank">Request a download
+    <h3 class="text-align-center no-margin-top">About the Author</h3>
+    <%= image_tag 'sam-n-okie.jpeg', class: 'sam-n-okie' %>
+    <p>
+      Highlighter was built by me, Sam McAlilly. I'm a writer
+      who needs something like this while reading and researching.
+    </p>
+    <p>
+      I suspect this might be useful for actual academics and journalists, 
+      so I'm sharing it. I'm working to expand the use of this core functionality.
+      My next update will include the ability to add notes and tags to the highlights.
+      I'm also going to combine this with 
+      <a href="https://medium.com/@smcalilly/project-gutenberg-typography-tool-55c9652d11fa" target="_blank" style="font-family: verdana">
+      another browser extension</a> I built, which improves the reading experience 
+      for websites with bad typopgraphy. 
+    </p>
+    <p>
+      There are some more ideas which are related to this tool, 
+      like an ambitous text editor I need for my own personal writing workflow.
+      It will play will with this browser extension.
+    </p>
+    <p>
+      Please tell your friends if you find this useful
+      and don't hesitate to <a href="mailto:smcalilly@gmail.com">email me</a> 
+      with any suggestions on how to improve it.
+    </p>
+    <h3 class="text-align-center no-margin-bottom">Keep on reading!</h3>
   </section>
