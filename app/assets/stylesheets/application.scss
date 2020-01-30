@@ -176,6 +176,12 @@ input #user_remember_me {
   margin-top: 50px;
 }
 
+@-moz-document url-prefix() {
+  .login-container {
+    padding-bottom: 30px;
+  }
+}
+
 .center-column-flex {
   display: flex;
   flex-direction: column;
