@@ -14,7 +14,7 @@
  *= require_self
  */
 
- body {
+body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -25,7 +25,7 @@ p {
   font-family: Georgia, 'Times New Roman', Georgia, 'Times New Roman', Times, serif;
 }
 
- a {
+a {
   color: #333;
   text-decoration: underline;
   //text-decoration-color: #fcfc60;
@@ -210,22 +210,24 @@ input #user_remember_me {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  //border: 1px solid #333333;
   border-radius: 3px;
   padding: 10px;
   box-shadow: 2px 2px lightgrey;
-}
 
-.banner-extension {
-  background: #fcfc60;
-  width: 100%;
-  height: 50px;
-  color: #333333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #333333;
-  border-radius: 3px;
+  #brand {
+    font-size: 1em;
+  }
+
+  a {
+    background-color:#fcfc60;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: #fcfc60;
+    background-color: #333;
+  }
 }
 
 .flash {
@@ -242,21 +244,6 @@ input #user_remember_me {
   padding: 7px 7px 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
-
-  h2 {
-    // text-align: left;
-    // font-weight: bold;
-    // padding: 5px 5px 5px 15px;
-    // font-size: 12px;
-    // margin: -7px -7px 0;
-    // background-color: orangered;
-    // color: #fff;
-  }
-
-  ul li {
-    // font-size: 12px;
-    // list-style: square;
-  }
 }
 
 .field_with_errors {

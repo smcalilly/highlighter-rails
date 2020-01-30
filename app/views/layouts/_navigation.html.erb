@@ -1,5 +1,5 @@
 <nav class="nav">
-  <h1><%= link_to 'Highlighter', highlights_path, class: 'brand' %></h1>
+  <h1><%= link_to 'Highlighter', highlights_path, id: 'brand' %></h1>
   <% flash.each do |key, value|%>
           <div class="flash <%= key %>">
             <%= value %>
