@@ -1,5 +1,14 @@
-<nav class="banner-app">
+<nav class="nav">
   <h1><%= link_to 'Highlighter', highlights_path, class: 'brand' %></h1>
+  <% flash.each do |key, value|%>
+          <div class="flash <%= key %>">
+            <%= value %>
+
+            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+              <span aria-hidden='true'>&times;</span>
+            </button>
+          </div>
+      <% end %>
 
   <div id="dropdownMenu">
     <% if user_signed_in? %>

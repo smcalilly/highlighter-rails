@@ -28,7 +28,10 @@ p {
  a {
   color: #333;
   text-decoration: underline;
-  text-decoration-color: #fcfc60;
+  //text-decoration-color: #fcfc60;
+  font-size: 16px;
+  background-color: #ffffb5;
+  font-family: verdana;
 
   &:hover {
     color: #fff;
@@ -113,7 +116,7 @@ input #user_remember_me {
   }
 
   .marketing {
-    margin-top: 80px;
+    margin-top: 50px;
   }
 
   .box-container {
@@ -122,7 +125,7 @@ input #user_remember_me {
 }
 
 .box {
-  border: 1px solid #333;
+  box-shadow: 2px 2px lightgrey;
   border-radius: 5px;
   background-color: #fff;
 }
@@ -141,7 +144,7 @@ input #user_remember_me {
 
 .sam-n-okie {
   float: right;
-  width: 30%;
+  width: 35%;
   padding: 10px;
 }
 
@@ -170,10 +173,7 @@ input #user_remember_me {
   justify-content: center;
   align-items: center;
   width: 300px;
-  border: solid 1px #333;
-  border-radius: 3px;
-  margin: 25px;
-  background-color: #fff;
+  margin-top: 50px;
 }
 
 .center-column-flex {
@@ -203,16 +203,17 @@ input #user_remember_me {
   align-items: center;
 }
 
-.banner-app {
+.nav {
   background: #fcfc60;
   height: 30px;
   color: #333333;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #333333;
+  //border: 1px solid #333333;
   border-radius: 3px;
   padding: 10px;
+  box-shadow: 2px 2px lightgrey;
 }
 
 .banner-extension {
@@ -228,14 +229,9 @@ input #user_remember_me {
 }
 
 .flash {
-  margin-top: 25px;
-  background-color: #fcfc60;
-  width: 200px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 3px;
   border-radius: 3px;
 }
 
