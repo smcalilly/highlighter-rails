@@ -17,6 +17,8 @@
 
 .source-link {
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .view-source {
