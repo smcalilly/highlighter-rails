@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
   # setup for the json api
-  devise_for :users, :controllers => { sessions: 'sessions', registrations: 'registrations' }
+  devise_for :users, 
+    :controllers => { 
+      sessions: 'sessions', 
+      registrations: 'registrations' 
+    }
+
+  devise_scope :user do
+    get 'users/install', :to => 'registrations#install'
+  end
+
   post 'authenticate', to: 'authentication#authenticate'
 
   # landing page for marketing
