@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get 'users/install', :to => 'registrations#install'
+    get 'users/welcome', :to => 'registrations#welcome'
   end
 
   post 'authenticate', to: 'authentication#authenticate'
