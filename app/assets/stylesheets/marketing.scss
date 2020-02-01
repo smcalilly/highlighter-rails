@@ -1,0 +1,36 @@
+a.download {
+  padding: 20px;
+  background-color: #fff;
+  
+}
+
+a.download:hover {
+  padding: 20px;
+  background-color: #fff;
+  transform: scale(0.9);
+}
+
+.download-box {
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+// #firefox {
+//   display: none;
+// }
+
+// #chrome {
+//  display: none;
+// }
+
+// @-moz-document url-prefix() {
+//   #firefox {
+//     display: block;
+//   }
+// }
+
+// @media screen and (-webkit-min-device-pixel-ratio:0) {
+//   #chrome { 
+//     display: block;
+//   }
+// }

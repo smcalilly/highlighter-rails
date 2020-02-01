@@ -13,14 +13,27 @@
     No matter what or where you read, your highlights are always 
     available to reference whenever you need them.
   </p>
-  <div class='text-align-center'>
-    <%= link_to 'Sign up', new_user_registration_path %> and <a href="https://forms.gle/EWhFUiKtR5QgzuRZ7" target="_blank">request a download for V1.</a>
-  </div>
 </section>
 
 <section class="highlight-box box">
   <div class="video-box">
     <iframe src="https://www.youtube.com/embed/SIxied7AVHg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section class='highlight-box box text-align-center'>
+  <h3 class='text-align-center no-margin-top'>Download</h3>
+  <%= link_to(image_tag('firefox-badge.png', alt: 'Download for Firefox'), 
+    'https://addons.mozilla.org/en-US/firefox/addon/highlighter-online', 
+      class: 'download', id: 'firefox') 
+  %>
+  <%= link_to(image_tag('chrome-badge-small.png', alt: 'Download for Chrome'), 
+    'https://chrome.google.com/webstore/detail/highlighter/jhbdfidbplpijoncnlfooepldoleioga', 
+      class: 'download', id: 'chrome') 
+  %>
+  <div class='text-align-center margin-top'>
+    Don't see your browser?
+    <a href='https://forms.gle/EWhFUiKtR5QgzuRZ7' target="_blank">Request a download.</a>
   </div>
 </section>
 
