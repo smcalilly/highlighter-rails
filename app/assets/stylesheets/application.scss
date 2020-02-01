@@ -38,7 +38,7 @@ a {
   }
 }
 
-a:hover {
+a:hover, .dropdown:hover {
   text-decoration: underline;
   color: #fcfc60;
 }
@@ -236,33 +236,6 @@ input #user_remember_me {
   align-items: center;
 }
 
-.nav {
-  background: #fcfc60;
-  height: 30px;
-  color: #333333;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 3px;
-  padding: 10px;
-  box-shadow: 2px 2px lightgrey;
-
-  #brand {
-    font-size: 1em;
-  }
-
-  a {
-    background-color:#fcfc60;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-    color: #fcfc60;
-    background-color: #333;
-  }
-}
-
 .flash {
   background-color: #333;
   color: #fff;
@@ -297,4 +270,3 @@ input #user_remember_me {
 .text-align-center {
   text-align: center;
 }
-

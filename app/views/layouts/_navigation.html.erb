@@ -1,22 +1,31 @@
 <nav class="nav">
   <h1><%= link_to 'Highlighter', highlights_path, id: 'brand' %></h1>
   <% flash.each do |key, value|%>
-          <div class="flash <%= key %>">
-            <%= value %>
+    <div class="flash <%= key %>">
+      <%= value %>
 
-            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-              <span aria-hidden='true'>&times;</span>
-            </button>
+      <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+        <span aria-hidden='true'>&times;</span>
+      </button>
+    </div>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <div class="dropdown">
+      <div class='dropbtn'>
+        <div class='menu-icon'></div>
+        <div class='menu-icon'></div>
+        <div class='menu-icon'></div>
+          <div class='dropdown-content'>
+            <%= link_to 'Highlights', highlights_path %>
+            <%= link_to 'Sources', sources_path %>
+            <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
           </div>
-      <% end %>
-
-  <div id="dropdownMenu">
-    <% if user_signed_in? %>
-      <strong><%= current_user.email %></strong>
-      <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
-    <% else %>
+    </div>
+  <% else %>
+    <div class='login-nav'>
       <%= link_to 'Log In', new_user_session_path %>
       <%= link_to 'Sign Up', new_user_registration_path %>
-      <% end %>
     </div>
+  <% end %>
 </nav>
