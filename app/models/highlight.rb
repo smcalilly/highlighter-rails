@@ -2,7 +2,6 @@ class Highlight < ApplicationRecord
   validates :text, :url, :source, presence: true
   belongs_to :user
   belongs_to :source
-  #accepts_nested_attributes_for :source
 
   # TODO -- add regex on url
   ## strip it of https www

@@ -105,6 +105,10 @@ input #user_remember_me {
   height: 15px;
 }
 
+.brand {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 @media screen and (min-width: 20rem) {
   p {
     font-size: calc(0.875rem + 0.5 * ((100vw - 20rem) / 60));
@@ -144,6 +148,12 @@ input #user_remember_me {
 }
 
 .box {
+  box-shadow: 2px 2px lightgrey;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.highlight-box {
   box-shadow: 2px 2px lightgrey;
   border-radius: 5px;
   background-color: #fff;

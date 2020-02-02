@@ -1,10 +1,10 @@
   <header class='header-highlight-index'>
-    <h1>Highlights</h1>
+    <h1 class='underline'>Highlights</h1>
     <%= link_to 'New Highlight', new_highlight_path %>
   </header>
 
     <% @highlights.each do |highlight| %>
-      <section class='highlight-box box'>
+      <section class='highlight-box'>
         <p class='no-margin-top'>
           <%= highlight.text %>
         </p>
