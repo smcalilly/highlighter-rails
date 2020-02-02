@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'webmock/minitest'
+#require 'webmock/minitest'
 
 class HighlightsControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers

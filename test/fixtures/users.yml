@@ -2,3 +2,26 @@ obama:
   id: 2020
   email: obama@chicago.com
   encrypted_password: <%= User.new.send(:password_digest, 'nohope') %>
+
+sylvia:
+  id: 5
+  email: sylvia@gmail.com
+  encrypted_password: sylviekitty
+
+no_email:
+  id: 1
+  encrypted_password: tupeloms
+
+no_password:
+  id: 11
+  email: elvis@gmail.com
+
+bad_password:
+  id: 2008
+  email: obama2008@chicago.com
+  encrypted_password: hope
+
+bad_email:
+  id: 237
+  email: sylviaatgmail.com
+  encrypted_password: meowpurr
