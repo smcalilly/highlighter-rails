@@ -1,4 +1,6 @@
 # highlighter
-This rails app saves "highlights", aka selected passages of text, while reading online. The highlights are sent from this Chrome browser extension: https://github.com/smcalilly/highlighter-chrome
+This rails app saves "highlights", aka selected passages of text, while reading online. The highlights are sent from this browser extension: https://github.com/smcalilly/highlighter-chrome
 
-The Chrome client authenticates to the Rails API with a JWT. The user's data is siloed and independent of other users' data.
+Visit www.highlighter.online to sign up.
+
+Download from the Firefox store: https://addons.mozilla.org/en-US/firefox/addon/highlighter-online Download from the Chrome store: https://chrome.google.com/webstore/detail/highlighter/jhbdfidbplpijoncnlfooepldoleioga
