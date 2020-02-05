@@ -21,7 +21,7 @@ module RailsApp
 
     config.middleware.insert_before 0, Rack::Cors, :debug => true, :logger => (-> { Rails.logger }) do
       allow do
-        origins '*'
+        origins ['moz-extension://ce763ad1-e4f3-ca4d-b974-810788b069ca', 'chrome-extension://jhbdfidbplpijoncnlfooepldoleioga']
 
         resource 'highlights', 
           headers: :any, 
