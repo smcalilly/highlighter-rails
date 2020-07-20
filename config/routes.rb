@@ -22,7 +22,8 @@ Rails.application.routes.draw do
   # authenticated :user do
   #   root :to => "highlights#index"
   # end
-  
+  get 'highlights/current' => 'highlights#current', :as => :current, :format => 'json'
   resources :highlights
+  
   resources :sources, only: [:index, :show, :new, :create, :destroy]
 end
