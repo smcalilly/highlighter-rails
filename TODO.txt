@@ -12,3 +12,6 @@ tests
 -- how to update a highlight...basically extend it? does that matter, because when the user goes back to the highlight, it will essentially go end to end if the text is unbroken?
 
 more comprehensive here: https://3.basecamp.com/4430364/buckets/15509309/todolists/2371228243
+
+
+color: #9667a8;

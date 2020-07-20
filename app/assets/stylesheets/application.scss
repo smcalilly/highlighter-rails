@@ -26,15 +26,14 @@ p, blockquote {
 }
 
 a {
-  color: #333;
+  color: #629e75;
   text-decoration: underline;
   font-size: 16px;
-  background-color: #ffffb5;
   font-family: verdana;
 
   &:hover {
     color: #fff;
-    background-color: #333;
+    background-color: #66516e;
   }
 }
 
@@ -57,8 +56,8 @@ a:hover, .dropdown:hover {
     height: 35px;
     border-radius: 10px;
     border: 2px #333 solid;
-    color: #333;
-    background: #fcfc60;
+    color: #fff;
+    background: #b78dc7;
     margin-bottom: 30px;
     margin-top: 20px;
     padding: 4px;
@@ -77,8 +76,8 @@ a:hover, .dropdown:hover {
   height: 35px;
   border-radius: 10px;
   border: 2px #333 solid;
-  color: #333;
-  background: #fcfc60;
+  color: #fff;
+  background: #b78dc7;
   margin-bottom: 30px;
   margin-top: 20px;
   font-size: 20px;
@@ -227,7 +226,7 @@ input #user_remember_me {
 
 .underline {
   text-decoration: underline;
-  text-decoration-color: #fcfc60;
+  text-decoration-color: #b78dc7;
 }
 
 #center-item-vertically {
