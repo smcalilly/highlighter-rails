@@ -2,3 +2,7 @@
 This rails app saves "highlights", aka selected passages of text, while reading online. The highlights are sent from this browser extension: https://github.com/smcalilly/highlighter-chrome
 
 Visit www.highlighter.online.
+
+I don't work with Rails much so I'm gonna save some useful commands here.
+
+`heroku logs --tail --app=high-lighter`
