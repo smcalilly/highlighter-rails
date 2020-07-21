@@ -30,10 +30,11 @@ a {
   text-decoration: underline;
   font-size: 16px;
   font-family: verdana;
+  font-weight: 600;
 
   &:hover {
     color: #fff;
-    background-color: #66516e;
+    background-color: #b78dc7;
   }
 }
 
@@ -225,8 +226,9 @@ input #user_remember_me {
 }
 
 .underline {
-  text-decoration: underline;
-  text-decoration-color: #b78dc7;
+  background: #b78dc7;
+  color: #fff;
+  padding: 1px;
 }
 
 #center-item-vertically {
