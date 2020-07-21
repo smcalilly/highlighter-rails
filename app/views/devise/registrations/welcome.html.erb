@@ -1,34 +1,34 @@
 <section class="highlight-box marketing">
+
   <header>
-    <h3 class="text-align-center no-margin-top">
-      Here is a tutorial.
-    </h3>
+  <h2 class="text-align-center no-margin-top rejoice">Welcome to Highlighter</h2>
   </header>
-  <p>
-    The Highlighter extension you just downloaded supplements <span class='underline'>www.highlighter.online</span> (the website you're currently on).
-    The username and password you just created is used for both. So now that you've created your account, you're logged in to <span class='underline'>www.highlighter.online</span>, but <strong>not</strong> the browser extension you just downloaded.
-  </p>
-  <p>
-    You need to log into the extension. You can do so via a popup in the top right corner of your browser.
-    Click the yellow box that says "Hi" and enter the username and password you created on the last page.
-  </p>
-  <p>Once you've logged into the popup successfully, you can now save your highlights!</p>
-</section>
-<section class="highlight-box">
+  <p>If you haven't downloaded the browser extension, then this app won't be useful for you. So first, download:</p>
+    <ul>
+      <li><a href="https://addons.mozilla.org/en-US/firefox/addon/highlighter-online/">Highlighter for Firefox</a></li>
+      <li><a href="https://chrome.google.com/webstore/detail/highlighter/jhbdfidbplpijoncnlfooepldoleioga">Highlighter for Chrome</a></li>
+    </ul>
+  <p>The browser extension you just downloaded supplements this web app (<a href='https://highlighter.online'>highlighter.online</a>). The username and password you just created is used for both. Any highlight you save with your extension is available at this web app. 
+  <p>You've already created your account, but you're only logged into <a href='https://highlighter.online'>highlighter.online</a> and <strong>not the Highlighter browser extension you just downloaded.</strong> So now you need to log into the extension. </p>
   
-  <p class="no-margin-top">
-  You can save a highlight by <strong>selecting the text</strong> with your cursor, <strong>right click</strong>, and choose <strong>"Save Highlight"</strong>.
-  </p>
-  <p>Much like you'd "highlight" text on a piece of paper, this action saves the highlight to a database so you can reference it later. You can access all of your highlights at https://highlighter.online.</p>
-  <p>Those highlights will also show up in the browser extension's popup anytime you open the popup on a page where you've saved highlights.</p>
 </section>
 
 <section class="highlight-box">
+  <h2 class="rejoice text-align-center no-margin-top">Log in to the extension</h2>
+  <p>
+    At the top right corner of your browser, click the purple logo that says "Hi" and enter the username and password you created earlier.
+  </p>
+  <p>Once you've logged into the popup successfully, you can now save your highlights.</p>
+</section>
+
+<section class="highlight-box">
+  <h2 class="rejoice text-align-center no-margin-top">How to save a highlight</h2>
+  <p class="no-margin-top">
+  Select text with your cursor, right click, and choose "Save Highlight".
+  </p>
   <p class="no-margin-top">Test it out with some quotes:</p>
   <blockquote>
-    Writing a novel is a terrible experience, during which the hair often falls out and the teeth decay. 
-    I'm always irritated by people who imply that writing fiction is an escape from reality. 
-    It is a plunge into reality and it's very shocking to the system. - Flannery O'Connor
+    It is certain, in any case, that ignorance, allied with power, is the most ferocious enemy justice can have. - James Baldwin
   </blockquote>
   <blockquote>
     "She wished there was some place where she could go to hum it out loud. 
@@ -36,6 +36,12 @@
     It was funny, too, how lonesome a person could be in a crowded house." 
     - <em>The Heart Is A Lonely Hunter</em> by Carson McCullers
   </blockquote>
+</section>
+
+<section class="highlight-box">
+  <p class="no-margin-top">Much like you'd "highlight" text on a piece of paper, this action saves the highlight to a database so you can reference it later. You can access all of your highlights on the <a href='https://highlighter.online'>highlighter.online</a> web app (the website where you're reading this).</p>
+  <p>Any highlight you create will be visible in the popup whenever you visit the webpage from where the highlight originated.</p>
   <div class='text-align-center continue'>
-    <%= link_to 'See My Highlights', highlights_path, :id => "button" %>
+    <%= link_to 'See My Highlights', highlights_path, :class => "big" %>
   </div>
+</section>

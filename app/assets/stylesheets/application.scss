@@ -52,24 +52,8 @@ a:hover, .dropdown:hover {
   margin-top: 15px;
 }
 
-#button {
-  width: 90px;
-    height: 35px;
-    border-radius: 10px;
-    border: 2px #333 solid;
-    color: #fff;
-    background: #b78dc7;
-    margin-bottom: 30px;
-    margin-top: 20px;
-    padding: 4px;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-#button:hover, #button:focus {
-  color: #fff;
-  background-color: #333;
-  cursor: pointer;
+a.big {
+  font-size: 24px;
 }
 
 .button {
@@ -280,4 +264,8 @@ input #user_remember_me {
 
 .text-align-center {
   text-align: center;
+}
+
+.pb-6 {
+  padding-bottom: 6px;
 }
