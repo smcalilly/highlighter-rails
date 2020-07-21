@@ -1,2 +1,7 @@
-<h2><%= link_to note.text, note_path(note) %></h2>
-<div><%= render note.tags %></div>
+<div>
+  <p>note: <%= link_to note.text, note_path(note) %>  <br/> user: <%= note.user_id %> <br/> </p>
+
+  <%# <%= render note.tags %> %>
+</div>
+
+<div></div>

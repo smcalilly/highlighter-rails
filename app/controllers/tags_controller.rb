@@ -1,10 +1,9 @@
 class TagsController < ApplicationController
   def index
-    @tags = ActsAsTaggableOn::Tag.all
+    @tags = policy_scope(Tag.order(created_at: :desc))
   end
 
   def show
-    @tag =  ActsAsTaggableOn::Tag.find(params[:id])
-    @notes = Note.tagged_with(@tag.name)
+    @tag = Tag.find(params[:id])
   end
 end

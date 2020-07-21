@@ -7,5 +7,6 @@ I don't work with Rails much so I'm gonna save some useful commands here.
 
 `heroku logs --tail --app=high-lighter`
 
-did tagging following this
-http://geekhmer.github.io/blog/2016/01/26/rails-tagging/
+
+
+tagging: https://laragon.org/rails/tagging.html

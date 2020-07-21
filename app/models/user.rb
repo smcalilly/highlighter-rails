@@ -6,6 +6,5 @@ class User < ApplicationRecord
 
   has_many :highlights
   has_many :sources
-
-  acts_as_tagger
+  has_many :tags
 end

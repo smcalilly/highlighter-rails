@@ -1,2 +1,7 @@
-<h1><%= @tag.name %></h1>
-<div><%= render @notes %></div>
+<h1>Notes tagged with <%= @tag.name %></h1>
+
+<ul>
+  <% @tag.notes.each do |note| %>
+    <li><%= link_to note.text, note_path(note) %></li>
+  <% end %>
+</ul>

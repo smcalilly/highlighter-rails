@@ -22,5 +22,5 @@ Rails.application.routes.draw do
   resources :highlights
   resources :sources, only: [:index, :show, :new, :create, :destroy]
   resources :notes
-  resources :tags, only: [:index, :show]
+  resources :tags
 end

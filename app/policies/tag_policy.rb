@@ -8,7 +8,7 @@ class TagPolicy < ApplicationPolicy
   end
 
   def index?
-    user.present?
+    true
   end
   
   def show?
@@ -20,11 +20,11 @@ class TagPolicy < ApplicationPolicy
   end
 
   def update?
-    return true if user.present? && user == Tag.user
+    return true if user.present? && user == tag.user
   end
 
   def destroy?
-    return true if user.present? && user == Tag.user
+    return true if user.present? && user == note.user
   end
 
   private
