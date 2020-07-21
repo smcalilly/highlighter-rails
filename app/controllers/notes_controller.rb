@@ -25,6 +25,8 @@ class NotesController < ApplicationController
   # POST /notes.json
   def create
     @note = Note.new(note_params)
+    @note.user = current_user
+    authorize @note
 
     respond_to do |format|
       if @note.save
@@ -64,11 +66,13 @@ class NotesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_note
-      @note = Note.find(params[:id])
+      @note = policy_scope(Note).find(params[:id])
+    rescue
+      redirect_to notes_path, notice: "that highlight doesn't exist."
     end
 
     # Only allow a list of trusted parameters through.
     def note_params
-      params.require(:note).permit(:user_id)
+      params.require(:note).permit(:user_id, :text)
     end
 end
