@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :notes
   # setup for the json api
   devise_for :users, 
     :controllers => { 
