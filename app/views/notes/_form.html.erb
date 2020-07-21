@@ -11,12 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :text %>
-    <%= form.text_area :text %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form_for note do |f|%>
+    <%= f.text_field :text, placeholder: 'text' %>
+    <%= f.text_field :tag_list, placeholder: 'tags' %>
+    <%= f.submit %>
+  <% end %>
 <% end %>

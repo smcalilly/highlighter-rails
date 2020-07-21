@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :notes
   # setup for the json api
   devise_for :users, 
     :controllers => { 
@@ -17,14 +16,11 @@ Rails.application.routes.draw do
   # landing page for marketing
   root to: 'marketing#home'
 
-  
-  #get '/user' => "highlights#index", :as => :user_root
-
-  # authenticated :user do
-  #   root :to => "highlights#index"
-  # end
+  # don't know rails so i have to set this route
   get 'highlights/current' => 'highlights#current', :as => :current, :format => 'json'
+
   resources :highlights
-  
   resources :sources, only: [:index, :show, :new, :create, :destroy]
+  resources :notes
+  resources :tags, only: [:index, :show]
 end
