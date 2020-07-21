@@ -12,12 +12,8 @@ class HighlightsController < ApplicationController
   end
 
   def current
-    puts '****************CURRENT**************'
-    puts params
     if params[:url]
       @highlight = policy_scope(Highlight).where(:url => params[:url]).all
-      puts "highlight"
-      puts @highlight.inspect
       respond_to do |format|
         format.json { render json: @highlight, status: :ok}
       end
