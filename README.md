@@ -34,3 +34,6 @@ $ bundle exec rspec spec/controllers/accounts_controller_spec.rb:8
 # See all options for running specs
 $ bundle exec rspec --help
 ```
+
+configured tailwind thanks to this
+https://web-crunch.com/posts/how-to-install-tailwind-css-using-ruby-on-rails#

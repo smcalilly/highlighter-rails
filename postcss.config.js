@@ -1,7 +1,7 @@
-module.exports = {
+// postcss.config.js
+let environment = {
   plugins: [
-    require('tailwindcss')('./app/javascript/css/tailwind.js'),
-    require('autoprefixer'),
+    require('tailwindcss')('./app/stylesheets/tailwind.config.js'),
     require('postcss-import'),
     require('postcss-flexbugs-fixes'),
     require('postcss-preset-env')({
@@ -9,6 +9,8 @@ module.exports = {
         flexbox: 'no-2009'
       },
       stage: 3
-    }),
+    })
   ]
-}
+};
+
+module.exports = environment;
