@@ -2,8 +2,8 @@ class Highlight < ApplicationRecord
   validates :text, :url, :source, presence: true
   belongs_to :user
   belongs_to :source
-  has_many :taggings
-  has_many :tags, through: :taggings
+  has_many :taggings, :as => :taggable
+  has_many :tags, :through => :taggings
   
   
   def tag_list

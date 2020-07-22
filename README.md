@@ -10,6 +10,8 @@ I don't work with Rails much so I'm gonna save some useful commands here.
 
 
 tagging: https://laragon.org/rails/tagging.html
+polymorphism: https://cobwwweb.com/rails-has-many-through-polymorphic-association
 
 Add a reference to a model
 `rails generate migration AddHighlightsRefToTaggings highlight:references`
+`rails generate migration AddTaggableToTaggings taggable:references{polymorphic}`

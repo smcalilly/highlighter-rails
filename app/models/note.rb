@@ -1,7 +1,7 @@
 class Note < ApplicationRecord
   belongs_to :user
-  has_many :taggings
-  has_many :tags, through: :taggings
+  has_many :taggings, :as => :taggable
+  has_many :tags, :through => :taggings
 
   def tag_list
     self.tags.collect do |tag|
