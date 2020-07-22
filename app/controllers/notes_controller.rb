@@ -1,5 +1,6 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
+  include Tagger
 
   def index
     @notes = policy_scope(Note).all
@@ -58,12 +59,7 @@ class NotesController < ApplicationController
 
     # i don't know how else to add the user id to a callback in the note model
     def create_note
-      tag_names = note_params[:tag_list].split(",").collect{|s| s.strip.downcase}.uniq
-      @tags = tag_names.collect { |name| Tag.create_with(user_id: current_user.id).find_or_create_by(name: name) }
-      
-      @tags.each do |tag|
-        authorize tag
-      end
+      @tags = find_or_create_tags(note_params, current_user.id)
   
       @note = Note.new(note_params)
       @note.user = current_user
