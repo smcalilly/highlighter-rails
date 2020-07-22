@@ -1,8 +1,7 @@
-<p>
-  <%= @note.body %>
-</p>
+<%= @md_html.to_s.html_safe %>
 
 <div><%= render @note.tags %> </div>
 
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+<%= render partial: "form", locals: { note: @note } %>
+
+<%= link_to '< back to notes', notes_path %>

@@ -34,3 +34,13 @@ $ bundle exec rspec spec/controllers/accounts_controller_spec.rb:8
 # See all options for running specs
 $ bundle exec rspec --help
 ```
+
+trix
+```
+<div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :tag_list, placeholder: 'tags' %>
+    <%= form.rich_text_area :content %>
+    <%= form.submit 'Create' %>
+  </div>
+```
