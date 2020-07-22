@@ -2,6 +2,7 @@
 
 <ul>
   <% @tag.notes.each do |note| %>
+    <%= puts note %>
     <li><%= link_to note.text, note_path(note) %></li>
   <% end %>
 </ul>

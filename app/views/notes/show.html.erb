@@ -1,15 +1,18 @@
 <p>
   Tags:
+  <%= puts 'tags' %>
+  <%= puts @note.tags %>
   <% @note.tags.each do |tag| %>
+    
     <%= link_to tag.name, tag_path(tag) %>
   <% end %>
 </p>
 
-<%# <p> %>
-  <%# <%= @note.text %>
-<%# </p> %>
+<p>
+  <%= @note.text %>
+</p>
 
-<%# <div><%= render @note.tags %> </div>
+<div><%= render @note.tags %> </div>
 
 <%= link_to 'Edit', edit_note_path(@note) %> |
 <%= link_to 'Back', notes_path %>

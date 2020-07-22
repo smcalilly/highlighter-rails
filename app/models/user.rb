@@ -6,5 +6,6 @@ class User < ApplicationRecord
 
   has_many :highlights
   has_many :sources
-  has_many :tags
+  has_many :notes
+  has_many :tags, :through => :notes
 end
