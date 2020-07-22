@@ -11,7 +11,7 @@
     <div class='m-8'>see content with these tags: <%= render @note.tags %></div>
   </div>
   
-  <div class='w-1/2 markdown mx-4'>
+  <div class='w-1/2 markdown mx-4' data-target='md-display' data-content-reloader-url='/notes'>
     <%= @md_html.to_s.html_safe %>
   </div>
 </div>
