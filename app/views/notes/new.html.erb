@@ -1,5 +1,9 @@
-<h1>New Note</h1>
-
-<%= render 'form', note: @note %>
-
-<%= link_to 'Back', notes_path %>
+<div class='flex m-4'>  
+  <div class='w-1/2 mx-4'>
+    <%= render partial: "form", locals: { note: @note } %>
+  </div>
+  
+  <div class='w-1/2 markdown mx-4' id='markdown'>
+    <%= @md_html.to_s.html_safe %>
+  </div>
+</div>

@@ -1,12 +1,17 @@
-<div class='flex m-4'>
-  <%= link_to '< back to notes', notes_path %>
-  
-  <div class='w-3/6 px-4'>
+<header class='flex items-center m-6'>
+  <div class='w-1/6'><%= link_to '< back to notes', notes_path, class: 'h-full' %></div>
+  <div class='w-4/6'>
+    <%= render 'title' %>
+  </div>
+</header>
+
+<div class='flex m-4'>  
+  <div class='w-1/2 mx-4'>
     <%= render partial: "form", locals: { note: @note } %>
     <div class='m-8'>see content with these tags: <%= render @note.tags %></div>
   </div>
   
-  <div class='w-2/6 markdown'>
-  <%= @md_html.to_s.html_safe %>
+  <div class='w-1/2 markdown mx-4'>
+    <%= @md_html.to_s.html_safe %>
   </div>
 </div>

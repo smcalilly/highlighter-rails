@@ -1,0 +1,4 @@
+<h1 class='text-center text-2xl text-gray-800'>
+  <%= truncate(@note.body) %>
+</h1>
+<p class='text-center text-sm text-gray-600'>last changed:  <%= @note.updated_at.strftime("%m-%d-%Y") %></p>
