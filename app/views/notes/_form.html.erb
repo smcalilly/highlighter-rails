@@ -11,9 +11,11 @@
     </div>
   <% end %>
 
-  <%= form_for note do |f|%>
-    <%= f.text_field :text, placeholder: 'text' %>
-    <%= f.text_field :tag_list, placeholder: 'tags' %> %>
-    <%= f.submit %>
-  <% end %>
+  <div class='center-column-flex'>
+    <%= form_for note do |f|%>
+      <%= f.text_field :body, placeholder: 'body' %>
+      <%= f.text_field :tag_list, placeholder: 'tags' %>
+      <%= f.submit %>
+    <% end %>
+  </div>
 <% end %>

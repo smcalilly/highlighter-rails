@@ -28,7 +28,7 @@ class NotePolicy < ApplicationPolicy
   end
 
   private
-  def highlight
+  def note
     record
   end
 end

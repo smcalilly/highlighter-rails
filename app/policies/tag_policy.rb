@@ -28,7 +28,7 @@ class TagPolicy < ApplicationPolicy
   end
 
   private
-  def highlight
+  def tag
     record
   end
 end

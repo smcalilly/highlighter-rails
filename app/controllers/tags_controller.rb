@@ -12,6 +12,6 @@ class TagsController < ApplicationController
     def set_tag
       @tag = policy_scope(Tag).find(params[:id])
     rescue
-      redirect_to notes_path, notice: "that highlight doesn't exist."
+      redirect_to notes_path, notice: "that tag doesn't exist."
     end
 end

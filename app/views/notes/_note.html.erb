@@ -1,5 +1,5 @@
 <div>
-  <p>note: <%= link_to note.text, note_path(note) %>  <br/> user: <%= note.user_id %> <br/> </p>
+  <p>note: <%= link_to note.body, note_path(note) %>  <br/> user: <%= note.user_id %> <br/> </p>
 
   <%= render note.tags %>
 </div>
