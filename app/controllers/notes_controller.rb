@@ -33,6 +33,9 @@ class NotesController < ApplicationController
   end
 
   def update
+    @tags = find_or_create_tags(note_params, current_user.id)
+    @note.tags = @tags
+
     respond_to do |format|
       if @note.update(note_params)
         format.html { redirect_to @note, notice: 'Note was successfully updated.' }

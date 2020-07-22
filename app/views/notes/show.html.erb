@@ -1,7 +1,12 @@
-<%= @md_html.to_s.html_safe %>
-
-<div><%= render @note.tags %> </div>
-
-<%= render partial: "form", locals: { note: @note } %>
-
-<%= link_to '< back to notes', notes_path %>
+<div class='flex m-4'>
+  <%= link_to '< back to notes', notes_path %>
+  
+  <div class='w-3/6 px-4'>
+    <%= render partial: "form", locals: { note: @note } %>
+    <div class='m-8'>see content with these tags: <%= render @note.tags %></div>
+  </div>
+  
+  <div class='w-2/6 markdown'>
+  <%= @md_html.to_s.html_safe %>
+  </div>
+</div>
