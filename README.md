@@ -37,3 +37,12 @@ $ bundle exec rspec --help
 
 configured tailwind thanks to this
 https://web-crunch.com/posts/how-to-install-tailwind-css-using-ruby-on-rails#
+trix
+```
+<div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :tag_list, placeholder: 'tags' %>
+    <%= form.rich_text_area :content %>
+    <%= form.submit 'Create' %>
+  </div>
+```

@@ -7,6 +7,8 @@ class NotesController < ApplicationController
   end
 
   def show
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+    @md_html = @markdown.render(@note.body)
   end
 
   def new
@@ -70,6 +72,6 @@ class NotesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def note_params
-      params.require(:note).permit(:user_id, :body, :tag_list)
+      params.require(:note).permit(:user_id, :body, :content, :tag_list)
     end
 end
