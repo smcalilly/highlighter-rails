@@ -10,3 +10,6 @@ I don't work with Rails much so I'm gonna save some useful commands here.
 
 
 tagging: https://laragon.org/rails/tagging.html
+
+Add a reference to a model
+`rails generate migration AddHighlightsRefToTaggings highlight:references`

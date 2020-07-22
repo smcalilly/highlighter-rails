@@ -2,6 +2,18 @@ class Highlight < ApplicationRecord
   validates :text, :url, :source, presence: true
   belongs_to :user
   belongs_to :source
+  has_many :taggings
+  has_many :tags, through: :taggings
+  
+  
+  def tag_list
+    self.tags.collect do |tag|
+      tag.name
+    end.join(", ")
+  end
+
+  def tag_list=(tags_string)
+  end
 
   # TODO -- add regex on url
   ## strip it of https www

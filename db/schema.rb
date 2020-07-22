@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_22_003553) do
+ActiveRecord::Schema.define(version: 2020_07_22_011412) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 2020_07_22_003553) do
     t.bigint "note_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "highlight_id"
+    t.index ["highlight_id"], name: "index_taggings_on_highlight_id"
     t.index ["note_id"], name: "index_taggings_on_note_id"
     t.index ["tag_id"], name: "index_taggings_on_tag_id"
   end
@@ -76,6 +78,7 @@ ActiveRecord::Schema.define(version: 2020_07_22_003553) do
   add_foreign_key "highlights", "users"
   add_foreign_key "notes", "users"
   add_foreign_key "sources", "users"
+  add_foreign_key "taggings", "highlights"
   add_foreign_key "taggings", "notes"
   add_foreign_key "taggings", "tags"
   add_foreign_key "tags", "users"

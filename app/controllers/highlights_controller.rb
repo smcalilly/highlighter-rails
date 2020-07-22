@@ -1,7 +1,7 @@
 class HighlightsController < ApplicationController
   before_action :set_highlight, only: [:show, :edit, :update, :destroy]
-  #before_action :make_sure_highlight_portion_doesn't_exist -- maybe find or create by for the highlight create method to?
   wrap_parameters format: [:json]
+  include Tagger
 
   def index
     @highlights = policy_scope(Highlight.order(created_at: :desc))
@@ -71,7 +71,7 @@ class HighlightsController < ApplicationController
     end
 
     def highlight_params
-      params.require(:highlight).permit(:text, :url)
+      params.require(:highlight).permit(:text, :url, :tag_list)
     end
 
     def create_highlight
@@ -83,10 +83,13 @@ class HighlightsController < ApplicationController
 
       @source = Source.find_or_create_by(source_params)
       authorize @source
+
+      @tags = find_or_create_tags(highlight_params, current_user.id)
   
       @highlight = Highlight.new(highlight_params)
       @highlight.user = current_user
       @highlight.source = @source
+      @highlight.tags = @tags
       authorize @highlight
     end
 end
