@@ -1,7 +1,13 @@
-<h1>Notes tagged with <%= @tag.name %></h1>
+<h1>Content tagged with <%= @tag.name %></h1>
 
 <ul>
   <% @tag.notes.each do |note| %>
     <li><%= link_to note.body, note_path(note) %></li>
+  <% end %>
+</ul>
+
+<ul>
+  <% @tag.highlights.each do |highlight| %>
+    <li><%= link_to highlight.text, highlight_path(highlight) %></li>
   <% end %>
 </ul>
