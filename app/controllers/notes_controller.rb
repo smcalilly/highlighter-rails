@@ -1,14 +1,16 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
   include Tagger
+  include Markdownable
 
   def index
     @notes = policy_scope(Note).all
+    @no_markdown = no_markdown
   end
 
   def show
-    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
-    @md_html = @markdown.render(@note.body)
+    @markdown = generate_markdown
+    @no_markdown = no_markdown
   end
 
   def new
@@ -38,6 +40,7 @@ class NotesController < ApplicationController
 
     respond_to do |format|
       if @note.update(note_params)
+        format.js { }
         format.html { redirect_to @note, notice: 'Note was successfully updated.' }
         format.json { render :show, status: :ok, location: @note }
       else
@@ -72,6 +75,8 @@ class NotesController < ApplicationController
       authorize @note
       return @note
     end
+
+    
 
     # Only allow a list of trusted parameters through.
     def note_params

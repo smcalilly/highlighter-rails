@@ -1,11 +1,13 @@
-<div class='flex flex-row items-center'>
-  <div class='m-4 bg-white p-4 rounded shadow w-1/2'>
+<div class='flex flex-row justify-center items-center w-2/3'>
+  <div class='m-2 bg-white p-4 rounded shadow w-2/3'>
     
     <div class='flex flex-row items-center justify-between'>
       <div class='flex flex-col'>
-        <%= link_to(note) do %>
-          <%= truncate(note.body) %>
-        <% end %> 
+        <span>
+          <%= link_to(note, class: 'text-green-600 font-bold text-lg') do %>
+            <%= truncate(@no_markdown.render(note.body)) %>
+          <% end %> 
+        </span>
         <p class='text-xs text-gray-400'><%= note.updated_at.strftime("%m-%d-%Y") %></p>
       </div>
       
@@ -14,7 +16,7 @@
       </div>
     </div>
     
-    <p class='text-sm text-gray-600'><%= truncate(note.body, :length => 120) %>
+    <p class='text-sm text-gray-600'><%= truncate(@no_markdown.render(note.body), :length => 120) %>
     
   </div>
   

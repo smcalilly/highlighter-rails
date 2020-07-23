@@ -1,11 +1,13 @@
 class TagsController < ApplicationController
   before_action :set_tag, only: [:show, :edit, :update, :destroy]
+  include Markdownable
 
   def index
     @tags = policy_scope(Tag)
   end
 
   def show
+    @no_markdown = no_markdown
   end
 
   private

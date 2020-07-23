@@ -1,10 +1,8 @@
 <h1>Content tagged with <%= @tag.name %></h1>
 
-<ul>
-  <% @tag.notes.each do |note| %>
-    <li><%= link_to note.body, note_path(note) %></li>
-  <% end %>
-</ul>
+<% @tag.notes.each do |note| %>
+  <%= render 'notes/note', :note => note %>
+<% end %>
 
 <ul>
   <% @tag.highlights.each do |highlight| %>

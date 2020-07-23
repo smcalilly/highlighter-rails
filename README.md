@@ -48,4 +48,11 @@ trix
 ```
 
 
-      
+## Markdown editor
+thanks to this gem https://github.com/vmg/redcarpet
+and one that renders it on change in the client (need to test that they work well together)
+some code to read again http://vaidehijoshi.github.io/blog/2015/08/11/rolling-out-the-redcarpet-for-rendering-markdown/
+
+# ughs
+rm -fr tmp/cache
+https://stackoverflow.com/questions/7042440/rails-using-cached-application-css-despite-changes
