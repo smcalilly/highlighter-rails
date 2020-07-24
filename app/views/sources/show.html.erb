@@ -1,5 +1,5 @@
   <header class='flex m-6 items-center'>
-     <%= link_to '< back to sources', sources_path, class: 'w-1/5' %>
+     <span><%= link_to '< back to sources', sources_path, class: 'w-1/5' %></span>
       <h1 class='w-3/5 flex items-center justify-center'>
         <%= link_to @source.location.to_s, @source.location,  target: :_blank, class: 'text-2xl' %>
       </h1>

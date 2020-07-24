@@ -1,17 +1,10 @@
-<header class='header-highlight-index'>
-  <h1>Sources</h1>
-  <%= link_to 'New Source', new_source_path %>
-</header>
+<div class='flex flex-col items-center justify-center w-full'>
+  <header class='flex w-1/3 items-center justify-between m-4'>
+    <h1 class='text-2xl'>Sources</h1>
+    <%= link_to 'New Source', new_source_path %>
+  </header>
 
-    <% @sources.each do |source| %>
-      <section class='highlight-box'>
-        <div class='source-link'>
-          <strong><%= link_to source.location, source.location, target: :_blank %></strong>
-        </div>
-        <div class='show-highlight-footer'>
-          <%= link_to 'Show', source %> |
-          <%= link_to 'Destroy', source, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
-      </section>
-    <% end %>
-
+  <% @sources.each do |source| %>
+    <%= render 'source_preview', :source => source %>
+  <% end %>
+</div>
