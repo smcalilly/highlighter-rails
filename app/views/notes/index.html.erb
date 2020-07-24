@@ -1,7 +1,10 @@
 <div class='flex flex-col items-center justify-center w-full'>
-  <div class='flex w-1/3 items-center justify-between m-4'>
+  <header class='flex w-1/3 items-center justify-between m-4'>
     <h1 class='text-2xl'>Notes</h1>
     <%= link_to 'New Note', new_note_path %>
-  </div>
-  <%= render @notes %>
+  </header>
+  
+  <% @notes.each do |note| %>
+    <%= render 'notes/note_preview', :note => note %>
+  <% end %>
 </div>

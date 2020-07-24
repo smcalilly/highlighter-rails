@@ -1,0 +1,17 @@
+<%= render "shared/content_preview" do %>
+  <div class='flex flex-row items-center justify-between'>
+    <div class='flex flex-col'>
+      <span>
+        <%= link_to(highlight, class: 'text-green-600 font-bold text-lg') do %>
+          <%= truncate(highlight.url) %>
+        <% end %> 
+      </span>
+    </div>
+    
+    <div class='flex flex-row'>
+      <%= render highlight.tags %>
+    </div>
+  </div>
+  
+  <p class='text-sm text-gray-600'><%= highlight.text %>
+<% end %>

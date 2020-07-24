@@ -1,7 +1,7 @@
 <h1>Content tagged with <%= @tag.name %></h1>
 
 <% @tag.notes.each do |note| %>
-  <%= render 'notes/note', :note => note %>
+  <%= render 'notes/note_preview', :note => note %>
 <% end %>
 
 <ul>

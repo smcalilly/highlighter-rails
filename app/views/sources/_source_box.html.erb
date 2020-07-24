@@ -1,0 +1,9 @@
+<%= render "shared/content_box" do %>
+  <p><%= highlight.text %></p>
+        
+  <div class='time-stamp'>
+    <%= highlight.created_at %>
+  </div>
+
+  <%= link_to 'Show', highlight %>
+<% end %>

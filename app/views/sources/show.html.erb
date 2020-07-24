@@ -1,23 +1,12 @@
-
-
-
-  <header class="source-header">
-      <h3><%= link_to @source.location, @source.location,  target: :_blank %></h3>
+  <header class='flex m-6 items-center'>
+     <%= link_to '< back to sources', sources_path, class: 'w-1/5' %>
+      <h1 class='w-3/5 flex items-center justify-center'>
+        <%= link_to @source.location.to_s, @source.location,  target: :_blank, class: 'text-2xl' %>
+      </h1>
       <br/>
   </header>
   
  
   <% @highlights.each do |highlight| %>
-     <section class='highlight-box'>
-       <p><%= highlight.text %></p>
-        
-        <div class='time-stamp'>
-          <%= highlight.created_at %>
-        </div>
-      
-      <%= link_to 'Show', highlight %>
-    </section>
+    <%= render 'source_box', :highlight => highlight  %>
   <% end %>
-  
-
-  <%= link_to 'Back', sources_path %>

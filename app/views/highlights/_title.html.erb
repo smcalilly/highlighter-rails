@@ -1,0 +1,21 @@
+<section class='flex flex-row justify-center items-center w-2/3'>
+  <div class='m-2 bg-white p-4 rounded shadow w-2/3'>
+    
+    <div class='flex flex-row items-center justify-between'>
+      <div class='flex flex-col'>
+        <span>
+          <%= link_to(highlight, class: 'text-green-600 font-bold text-lg') do %>
+            <%= truncate(highlight.url) %>
+          <% end %> 
+        </span>
+      </div>
+      
+      <div class='flex flex-row'>
+        <%= render highlight.tags %>
+      </div>
+    </div>
+    
+    <p class='text-sm text-gray-600'><%= truncate(@highlight.text, :length => 120) %>
+    
+  </div>
+</section>

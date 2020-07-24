@@ -1,0 +1,18 @@
+<%= render "shared/content_preview" do %>
+  <div class='flex flex-row items-center justify-between'>
+    <div class='flex flex-col'>
+      <span>
+        <%= link_to(note, class: 'text-green-600 font-bold text-lg') do %>
+          <%= truncate(@no_markdown.render(note.body)) %>
+        <% end %> 
+      </span>
+      <p class='text-xs text-gray-400'><%= note.updated_at.strftime("%m-%d-%Y") %></p>
+    </div>
+    
+    <div class='flex flex-row'>
+      <%= render note.tags %>
+    </div>
+  </div>
+  
+  <p class='text-sm text-gray-600'><%= truncate(@no_markdown.render(note.body), :length => 120) %>
+<% end %>
