@@ -1,20 +1,29 @@
+<div class='flex flex-col items-center justify-center w-full'>
 <section class="highlight-box marketing">
   <header>
-    <h2 class="text-align-center no-margin-top">
+    <h2 class="text-center text-3xl font-bold">
       Readers, writers, and forgetful academics...
     </h2>
     <div>
-      <h1 class="text-align-center rejoice">REJOICE!</h1>
+      <h1 class="text-align-center rejoice mt-4 mb-8 text-4xl font-bold">REJOICE!</h1>
     </div>
-    
   </header>
 
-  <p>
-    <strong class='brand'>
-    Highlighter</strong> lets you save notable quotes, or "highlights," 
-    while reading in your favorite web browser.
-    Your highlights are always available online to reference whenever you need them.
-  </p>
+  <div class="flex flex-row">
+    <p class='w-4/5'>
+      <strong class='brand'>
+      Highlighter</strong> saves your notable quotes, or "highlights," 
+      while reading in your favorite web browser.
+      Your highlights are always available online to reference whenever you need them.
+    </p>
+    <div class="flex flex-row">
+      <p class='flex w-1/3 justify-center'>
+        <%= link_to 'save', '', class: 'text-xs text-purple-300' %>
+        <%= link_to 'with', '', class: 'text-xs text-purple-300' %>
+        <%= link_to 'tags', '', class: 'text-xs text-purple-300' %>
+      </p>
+    </div>
+  </div>
 </section>
 
 <section class="highlight-box">
@@ -67,3 +76,4 @@
     </p>
     <h2 class="text-align-center no-margin-bottom rejoice">Keep on reading!</h2>
   </section>
+</div>
