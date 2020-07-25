@@ -2,7 +2,7 @@
   <div class='flex flex-col items-center justify-center w-full'>
     <%= render "shared/content_preview" do %>
       <div class='source-link'>
-        <%= link_to source.location, source %> 
+        <%= link_to truncate(source.location), source %> 
       </div>
     <% end %>
   </div>

@@ -28,6 +28,7 @@ more comprehensive here: https://3.basecamp.com/4430364/buckets/15509309/todolis
 - add all the crud actions to the tags?
 - sort by source and tags
 - add notes to the menu
+- editor preview for non-users
 
 ### notes
 - paging
@@ -73,6 +74,7 @@ https://github.com/collectiveidea/audited
 - https://github.com/rails/webpacker/issues/2288
 - time display is wrong time zone
 - purgecss to remove unused tailwind
+- html input active when visting page
 
 
 ### tests
