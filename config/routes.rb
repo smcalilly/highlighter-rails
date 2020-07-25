@@ -14,7 +14,11 @@ Rails.application.routes.draw do
   post 'authenticate', to: 'authentication#authenticate'
 
   # landing page for marketing
-  root to: 'marketing#home'
+  root to: 'marketing#index'
+  get 'editor', :to => 'marketing#editor'
+
+  get 'home', :to => 'home#index'
+ 
 
   # don't know rails so i have to set this route
   get 'highlights/current' => 'highlights#current', :as => :current, :format => 'json'

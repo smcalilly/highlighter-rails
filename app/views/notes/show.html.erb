@@ -7,8 +7,7 @@
 
 <div class='flex m-4'>  
   <div class='w-1/2 mx-4'>
-    <%= render partial: "form", locals: { note: @note } %>
-    <div class='m-8'>see content with these tags: <%= render @note.tags %></div>
+    <%= render partial: "editor", locals: { note: @note } %>
   </div>
   
   <div class='w-1/2 markdown mx-4 h-screen overflow-scroll border border-gray-300 rounded-lg px-4 bg-white' data-target='md-display'>

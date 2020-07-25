@@ -4,7 +4,9 @@
     <%= link_to 'New Note', new_note_path %>
   </header>
   
-  <% @notes.each do |note| %>
-    <%= render 'notes/note_preview', :note => note %>
-  <% end %>
+    <% @notes.each do |note| %>
+      <div class='flex flex-row justify-center items-center w-2/3'>
+        <%= render 'notes/note_preview', :note => note %>
+      </div>
+    <% end %>
 </div>

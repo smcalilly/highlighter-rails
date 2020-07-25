@@ -1,0 +1,23 @@
+<div class='flex flex-row m-8'>
+  <div class='flex flex-col'>
+    <h1 class='text-xl'>Notes</h1>
+    <% @notes.each do |note| %>
+      <%= render 'notes/note_preview', :note => note %>
+    <% end %>
+  </div>
+
+  <div class='flex flex-col m-4'>
+    <h1 class='text-xl'>Highlights</h1>
+    <% @highlights.each do |highlight| %>
+      <%= render 'highlights/highlight_preview', :highlight => highlight %>
+    <% end %>
+  </div>
+
+  <div class='flex flex-col m-4'>
+    <h1 class='text-xl'>Sources</h1>
+    <% @sources.each do |source| %>
+      <%= render 'sources/source_preview', :source => source %>
+    <% end %>
+  </div>
+  
+</div>

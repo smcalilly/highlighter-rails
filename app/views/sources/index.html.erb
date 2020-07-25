@@ -5,6 +5,8 @@
   </header>
 
   <% @sources.each do |source| %>
-    <%= render 'source_preview', :source => source %>
+    <div class='flex flex-row justify-center items-center w-1/2'>
+      <%= render 'source_preview', :source => source %>
+    </div>
   <% end %>
 </div>

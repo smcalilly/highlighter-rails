@@ -15,20 +15,18 @@ more comprehensive here: https://3.basecamp.com/4430364/buckets/15509309/todolis
 
 
 ### UX/UI
-- marketing to about
+- marketing to about...can't access it when logged in bc of the way my authentication is setup
 - 404 page
 - setup mailer
 - add user info
 - restyle error flashes
-- restyles highlights boxes
-- user signup fix style
-- responsive
+- responsive!!
 - report a bug or contact
+- improve home...link to see more notes etc, to create notes? add tags
 
 ### features
 - add all the crud actions to the tags?
 - sort by source and tags
-- dashboard
 - add notes to the menu
 
 ### notes
@@ -41,6 +39,8 @@ more comprehensive here: https://3.basecamp.com/4430364/buckets/15509309/todolis
 - delete note
 - md cheat sheet popup
 
+## Editor and project
+- Download the document as md, html, plain text, pdf
 
 ## projects
 - project has many folders, has many tags
@@ -61,14 +61,11 @@ https://github.com/chaps-io/public_activity
 https://github.com/collectiveidea/audited
 
 
-## Editor and project
-- Download the document as md, html, plain text, pdf
-
-### version control
+### deployment
+- need script to do rake task
 
 
 ### fix
-- login redirect bug
 - bad login error doesn't show
 - FIX TAG POLICY BUG!
 - delete tag and remove any references 
@@ -76,7 +73,6 @@ https://github.com/collectiveidea/audited
 - https://github.com/rails/webpacker/issues/2288
 - time display is wrong time zone
 - purgecss to remove unused tailwind
-- link to source is broken
 
 
 ### tests
