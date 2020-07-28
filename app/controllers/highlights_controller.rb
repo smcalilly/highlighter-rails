@@ -75,6 +75,9 @@ class HighlightsController < ApplicationController
     end
 
     def create_highlight
+      @highlight = Highlight.new(highlight_params)
+      @highlight.user = current_user
+
       source_params = {
         user_id: current_user.id,
         location: highlight_params[:url],
@@ -82,14 +85,16 @@ class HighlightsController < ApplicationController
       }
 
       @source = Source.find_or_create_by(source_params)
-      authorize @source
-
-      @tags = find_or_create_tags(highlight_params, current_user.id)
-  
-      @highlight = Highlight.new(highlight_params)
-      @highlight.user = current_user
+      authorize @source      
       @highlight.source = @source
-      @highlight.tags = @tags
+
+      if highlight_params[:tag_list]?
+        @tags = find_or_create_tags(highlight_params, current_user.id)
+        @highlight.tags = @tags
+      end
+      
+      
+      
       authorize @highlight
     end
 end
