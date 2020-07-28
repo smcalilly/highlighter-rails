@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :assortments
   # setup for the json api
   devise_for :users, 
     :controllers => { 

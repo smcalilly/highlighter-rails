@@ -7,5 +7,8 @@ class User < ApplicationRecord
   has_many :highlights
   has_many :sources
   has_many :notes
+  has_many :assortments
+
+  # not sure i follow this?
   has_many :tags, :through => :notes
 end

@@ -1,0 +1,28 @@
+<h1>Assortments</h1>
+<p>Assortments allow you to group together tags. Say you have a bunch of notes with #learn and you have a tag about your work in progress called #new-book.</p>
+<p>Assortments make it so you create a note with #learn and #new-book. Instead of just searching the #learn tag or the #new-book tag, you can sort both tags into a single Assortment. This assortment is automatically added to your writing project that uses the #new-book tag.</p>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assortments.each do |assortment| %>
+      <tr>
+        <td><%= assortment.name %></td>
+        <td><%= link_to 'Show', assortment %></td>
+        <td><%= link_to 'Edit', edit_assortment_path(assortment) %></td>
+        <td><%= link_to 'Destroy', assortment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assortment', new_assortment_path %>

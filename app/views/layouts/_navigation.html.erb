@@ -5,7 +5,8 @@
     <%= link_to 'Notes', notes_path %>
     <%= link_to 'Highlights', highlights_path %>
     <%= link_to 'Sources', sources_path %>
-    <%= link_to 'Assortments', tags_path %>
+    <%= link_to 'Assortments', assortments_path %>
+    <%= link_to 'Tags', tags_path %>
 
     <div class='dropdown'>
       <div class='dropbtn'>
@@ -14,7 +15,7 @@
         <div class='menu-icon'></div>
       
       <div class='dropdown-content bg-white'>
-        <%= link_to current_user.email %>
+        <%= link_to current_user.email, edit_user_registration_path %>
         <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
       </div>
       </div>

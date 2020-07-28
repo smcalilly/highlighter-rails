@@ -18,11 +18,12 @@ more comprehensive here: https://3.basecamp.com/4430364/buckets/15509309/todolis
 - marketing to about...can't access it when logged in bc of the way my authentication is setup
 - 404 page
 - setup mailer
-- add user info
+- improve user page
 - restyle error flashes
 - responsive!!
 - report a bug or contact
 - improve home...link to see more notes etc, to create notes? add tags
+- adding new tags is bad UX...need something like hashtags
 
 ### features
 - add all the crud actions to the tags?
@@ -115,3 +116,6 @@ https://app.sendgrid.com/settings/sender_auth/verify?domain=8651919&provider=
       </p>
     </div>
   </div>
+
+
+<%= form.select :tags, @tags.all.collect {|t| [t.name, t.id]} %>

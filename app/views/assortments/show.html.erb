@@ -1,0 +1,7 @@
+<p><%= @assortment.name %></p>
+<%= @assortment.tags.each do |tag| %>
+  <p><%= tag.name %></p>
+<% end %>
+
+<%= link_to 'Edit', edit_assortment_path(@assortment) %> |
+<%= link_to 'Back', assortments_path %>

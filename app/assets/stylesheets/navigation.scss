@@ -46,7 +46,7 @@
 }
 
 .dropdown-content a:hover {
-  background-color: #333
+  background-color: #b78dc7
 }
 
 .dropdown:hover .dropdown-content {
@@ -62,4 +62,8 @@
   height: 4px;
   background-color: #333;
   margin: 5px 0;
+}
+
+.menu-icon:hover {
+  background-color: #fff;
 }
