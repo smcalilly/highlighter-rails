@@ -1,17 +1,3 @@
-tests
--- controllers
-    highlights: source_id in the fixtures?
-    api tests for highlights
-    sources
-    user / devise
--- helpers
-    jwt!
--- models
--- system? after i update the ui?
-
--- how to update a highlight...basically extend it? does that matter, because when the user goes back to the highlight, it will essentially go end to end if the text is unbroken?
-
-more comprehensive here: https://3.basecamp.com/4430364/buckets/15509309/todolists/2371228243
 
 
 ### UX/UI
@@ -80,7 +66,9 @@ https://github.com/collectiveidea/audited
 - back to notes when i'm on home and look at a note. it takes me bacck to notes and not back home, where i was. weird and bad ux.
 - validation on tags
 - pagination for models indexing
-
+- marketing nav
+- not sure i follow this? models/user.rb `has_many :tags, :through => :notes`
+- more semantic html...specifically ul/li for nav and maybe ul/li for content items
 
 ### tests
 - write tests for notes
@@ -88,6 +76,23 @@ https://github.com/collectiveidea/audited
 - tests for sources
 - multi tenancy!
 - fuck a test
+
+
+tests
+-- controllers
+    highlights: source_id in the fixtures?
+    api tests for highlights
+    sources
+    user / devise
+-- helpers
+    jwt!
+-- models
+-- system? after i update the ui?
+
+-- how to update a highlight...basically extend it? does that matter, because when the user goes back to the highlight, it will essentially go end to end if the text is unbroken?
+
+more comprehensive here: https://3.basecamp.com/4430364/buckets/15509309/todolists/2371228243
+
 
 
 color: #9667a8;

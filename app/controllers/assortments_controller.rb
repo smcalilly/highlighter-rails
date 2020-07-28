@@ -1,12 +1,14 @@
 class AssortmentsController < ApplicationController
   before_action :set_assortment, only: [:show, :edit, :update, :destroy]
   include Tagger
+  include Markdownable
 
   def index
     @assortments = Assortment.all
   end
 
   def show
+    @no_markdown = no_markdown
   end
 
   def new

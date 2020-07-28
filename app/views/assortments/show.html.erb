@@ -1,6 +1,12 @@
-<p><%= @assortment.name %></p>
+<h2>Assortment: <%= @assortment.name %></h2>
 <%= @assortment.tags.each do |tag| %>
-  <p><%= tag.name %></p>
+  <% tag.notes.each do |note| %>
+    <%= render 'notes/note_preview', :note => note %>
+  <% end %>
+
+  <% tag.highlights.each do |highlight| %>
+    <%= link_to highlight.text, highlight_path(highlight) %>
+  <% end %>
 <% end %>
 
 <%= link_to 'Edit', edit_assortment_path(@assortment) %> |
