@@ -27,8 +27,6 @@ more comprehensive here: https://3.basecamp.com/4430364/buckets/15509309/todolis
 ### features
 - add all the crud actions to the tags?
 - sort by source and tags
-- add notes to the menu
-- editor preview for non-users
 
 ### notes
 - paging
@@ -75,6 +73,9 @@ https://github.com/collectiveidea/audited
 - time display is wrong time zone
 - purgecss to remove unused tailwind
 - html input active when visting page
+- back to notes when i'm on home and look at a note. it takes me bacck to notes and not back home, where i was. weird and bad ux.
+- validation on tags
+- pagination for models indexing
 
 
 ### tests

@@ -197,4 +197,9 @@
   @apply shadow-outline;
 }
 
+.tags {
+  @apply text-xs;
+  @apply text-purple-300
+}
+
 @import "tailwindcss/utilities";

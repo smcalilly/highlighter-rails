@@ -1,19 +1,25 @@
-<nav class="nav h-12 m-2">
-  <h1 class="text-2xl"><%= link_to 'Highlighter', home_path, id: 'brand' %></h1>
-
+<nav class="nav h-12 my-4 mx-8">
   <% if user_signed_in? %>
-    <div class="dropdown">
+    <%= link_to image_tag('highlight-logo.png', class: 'w-12'), home_path %>
+    <%= link_to 'Writer', editor_path %>
+    <%= link_to 'Notes', notes_path %>
+    <%= link_to 'Highlights', highlights_path %>
+    <%= link_to 'Sources', sources_path %>
+    <%= link_to 'Assortments', tags_path %>
+
+    <div class='dropdown'>
       <div class='dropbtn'>
         <div class='menu-icon'></div>
         <div class='menu-icon'></div>
         <div class='menu-icon'></div>
-          <div class='dropdown-content bg-white'>
-            <%= link_to 'Notes', notes_path %>
-            <%= link_to 'Highlights', highlights_path %>
-            <%= link_to 'Sources', sources_path %>
-            <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
-          </div>
+      
+      <div class='dropdown-content bg-white'>
+        <%= link_to current_user.email %>
+        <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+      </div>
+      </div>
     </div>
+
   <% else %>
     <div class='login-nav'>
       <%= link_to 'Log In', new_user_session_path %>

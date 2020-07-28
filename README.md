@@ -5,7 +5,11 @@ Visit www.highlighter.online.
 
 I don't work with Rails much so I'm gonna save some useful commands here.
 
+## heroku commands
 `heroku logs --tail --app=high-lighter`
+`heroku run rails console`
+
+## development stuff
 `kill -9 $(lsof -i :3000 -t)`
 
 
@@ -37,15 +41,6 @@ $ bundle exec rspec --help
 
 configured tailwind thanks to this
 https://web-crunch.com/posts/how-to-install-tailwind-css-using-ruby-on-rails#
-trix
-```
-<div class="field">
-    <%= form.label :content %>
-    <%= form.text_field :tag_list, placeholder: 'tags' %>
-    <%= form.rich_text_area :content %>
-    <%= form.submit 'Create' %>
-  </div>
-```
 
 
 ## Markdown editor
