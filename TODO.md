@@ -28,6 +28,8 @@ more comprehensive here: https://3.basecamp.com/4430364/buckets/15509309/todolis
 ### features
 - add all the crud actions to the tags?
 - sort by source and tags
+- project
+- note syncing with my google notes
 
 ### notes
 - paging
@@ -81,7 +83,7 @@ https://github.com/collectiveidea/audited
 
 ### tests
 - write tests for notes
-- tests for highlights?
+- tests for highlights? yes! write tests to simulate extensions or you're gonna keep fucking up the api...maybe wait to refactor api
 - tests for sources
 - multi tenancy!
 - fuck a test

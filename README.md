@@ -23,6 +23,7 @@ I don't work with Rails much so I'm gonna save some useful commands here.
 ## heroku commands
 `heroku logs --tail --app=high-lighter`
 `heroku run rails console`
+`heroku run rake db:migrate` (need to move this to a procfile)
 
 ## development stuff
 `kill -9 $(lsof -i :3000 -t)`
