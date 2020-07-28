@@ -88,7 +88,7 @@ class HighlightsController < ApplicationController
       authorize @source      
       @highlight.source = @source
 
-      if highlight_params[:tag_list]:
+      if highlight_params[:tag_list]
         @tags = find_or_create_tags(highlight_params, current_user.id)
         @highlight.tags = @tags
       end

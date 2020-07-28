@@ -65,6 +65,7 @@ https://github.com/collectiveidea/audited
 
 ### deployment
 - need script to do rake task
+- setup staging deployment!
 
 
 ### fix
