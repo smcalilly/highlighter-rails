@@ -12,10 +12,11 @@
 - adding new tags is bad UX...need something like hashtags
 
 ### features
+- assortment -- add authorization. style the views
 - add all the crud actions to the tags?
-- sort by source and tags
 - project
 - note syncing with my google notes
+- sorting and filtering for all the models index pages
 
 ### notes
 - paging
@@ -26,6 +27,10 @@
 - version control
 - delete note
 - md cheat sheet popup
+
+## home
+- search by tag
+- create an assortment based on that tag
 
 ## Editor and project
 - Download the document as md, html, plain text, pdf
@@ -55,7 +60,6 @@ https://github.com/collectiveidea/audited
 
 
 ### fix
-- bad login error doesn't show
 - FIX TAG POLICY BUG!
 - delete tag and remove any references 
 - dependent: destroy on new models?
@@ -66,9 +70,11 @@ https://github.com/collectiveidea/audited
 - back to notes when i'm on home and look at a note. it takes me bacck to notes and not back home, where i was. weird and bad ux.
 - validation on tags
 - pagination for models indexing
-- marketing nav
 - not sure i follow this? models/user.rb `has_many :tags, :through => :notes`
 - more semantic html...specifically ul/li for nav and maybe ul/li for content items
+- stupid ass bug with assortments#show rendering the model instance data like it's the console
+- home#index source link color is different than the others
+- does devise "remember me" work?
 
 ### tests
 - write tests for notes

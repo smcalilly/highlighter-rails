@@ -37,3 +37,5 @@ yarn-debug.log*
 .commands.txt
 .browserslistrc
 .ruby-version
+
+.DS_Store

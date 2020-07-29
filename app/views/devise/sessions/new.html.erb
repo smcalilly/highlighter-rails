@@ -1,5 +1,9 @@
-<div class='flex justify-center items-center'>
-  <div class="box login-container p-8">
+<% if flash[:alert] %>
+  <div class='text-center text-yellow-500 font-bold'><%= flash[:alert] %></div>
+<% end %>
+
+<div class='flex justify-center items-center mt-4'>
+  <div class='box flex flex-col items-center p-8'>
     <h2 class="text-xl font-bold mb-4">Log in</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "center-column-flex"}) do |f| %>
@@ -15,7 +19,7 @@
       <% end %>
 
       <div class="m-4">
-        <%= f.submit "Log in", :class => "btn-green" %>
+        <%= f.submit "Log in", :class => "btn-pink" %>
       </div>
     <% end %>
 

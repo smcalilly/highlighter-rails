@@ -164,8 +164,8 @@
   @apply px-3;
 }
 
-.btn-green {
-  @apply bg-green-500;
+.btn-pink {
+  @apply bg-red-400;
   @apply text-white;
   @apply font-bold;
   @apply py-2;
@@ -174,7 +174,7 @@
   @apply cursor-pointer;
 }
 
-.btn-green:hover {
+.btn-pink:hover {
   @apply bg-purple-700;
 }
 

@@ -1,5 +1,10 @@
+<% if flash[:alert] %>
+  <div class='text-center text-yellow-500 font-bold'><%= flash[:alert] %></div>
+<% end %>
+
+<div>
 <div class='flex justify-center items-center'>
-  <div class='box login-container'>
+  <div class='box flex flex-col items-center p-8'>
     <h2 class='text-xl font-bold m-6'>Edit <%= resource_name.to_s.humanize %></h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -33,7 +38,7 @@
       </div>
 
       <div class='flex justify-center'>
-        <%= f.submit 'Update', class: 'btn-green' %>
+        <%= f.submit 'Update', class: 'btn-pink' %>
       </div>
     <% end %>
   </div>
@@ -45,4 +50,5 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+</div>
 </div>

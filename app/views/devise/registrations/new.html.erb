@@ -1,5 +1,9 @@
+<% if flash[:alert] %>
+  <div class='text-center text-yellow-500 font-bold'><%= flash[:alert] %></div>
+<% end %>
+
 <div class='flex justify-center items-center'>
-<div class="box login-container">
+<div class='box flex flex-col items-center p-8'>
   <h2 class="text-xl font-bold m-6">Sign up</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "center-column-flex"}) do |f| %>
@@ -24,7 +28,7 @@
     </div>
 
     <div class="actions m-6" class="center-column-flex">
-      <%= f.submit 'Sign Up', :class => "btn-green" %>
+      <%= f.submit 'Sign Up', :class => "btn-pink" %>
     </div>
   <% end %>
 </div>
