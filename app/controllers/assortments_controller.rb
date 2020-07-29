@@ -4,7 +4,7 @@ class AssortmentsController < ApplicationController
   include Markdownable
 
   def index
-    @assortments = Assortment.all
+    @assortments = policy_scope(Assortment).all
   end
 
   def show
@@ -24,6 +24,8 @@ class AssortmentsController < ApplicationController
     @assortment.user = current_user
     @tags = find_or_create_tags(assortment_params, current_user.id)
     @assortment.tags = @tags
+
+    authorize @assortment
 
     respond_to do |format|
       if @assortment.save

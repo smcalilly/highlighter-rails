@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   # landing page for marketing
   root to: 'marketing#index'
   get 'editor', :to => 'marketing#editor'
+  get 'extension', :to => 'marketing#extension'
 
   get 'home', :to => 'home#index'
  

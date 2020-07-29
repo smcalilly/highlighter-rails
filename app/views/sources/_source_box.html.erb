@@ -1,12 +1,19 @@
 <%= render "shared/content_box" do %>
   <p><%= highlight.text %></p>
+
+  <%= render highlight.tags %>
         
-  <div class='time-stamp'>
+  <div class='time-stamp text-left'>
     <%= highlight.created_at %>
   </div>
 
   <div class='flex justify-end'>
     <%= link_to 'see the highlight >', highlight %>
   </div>
+
+  
+    <div class='flex justify-between items-center mt-4'>
+      <%= link_to 'Delete', @highlight, method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-red-300' %>
+    </div>
   
 <% end %>

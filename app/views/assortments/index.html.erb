@@ -1,28 +1,16 @@
-<h1>Assortments</h1>
-<p>Assortments allow you to group together tags. Say you have a bunch of notes with #learn and you have a tag about your work in progress called #new-book.</p>
-<p>Assortments make it so you create a note with #learn and #new-book. Instead of just searching the #learn tag or the #new-book tag, you can sort both tags into a single Assortment. This assortment is automatically added to your writing project that uses the #new-book tag.</p>
+<div class='flex flex-row justify-around items-center mt-4'>
+  <h1 class='text-2xl font-bold'>Assortments</h1>
+  <%= link_to 'New Assortment', new_assortment_path, class: 'text-red-300' %>
+</div>
 
+<div class='flex flex-col items-center mt-4'>
+  <p class='w-2/3 explainer-text'>Assortments allow you to group tags. Say you have a bunch of notes with a tag about your work in progress called <span class='tags'>#new-book</span>. You might also have a source associated with that tag called <span class='tags'>#read</span>, so you can add something to your reading list about <span class='tags'>#new-book</span>.</p>
+  <br/>
+  <p class='w-2/3 explainer-text'>Instead of just searching the <span class='tags'>#read</span> tag and digging for all the related <span class='tags'>#new-book</span> tags, you can sort both tags into a single Assortment. This assortment is automatically added to your writing project that uses the <span class='tags'>#new-book</span> tag.</p>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @assortments.each do |assortment| %>
-      <tr>
-        <td><%= assortment.name %></td>
-        <td><%= link_to 'Show', assortment %></td>
-        <td><%= link_to 'Edit', edit_assortment_path(assortment) %></td>
-        <td><%= link_to 'Destroy', assortment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Assortment', new_assortment_path %>
+<% @assortments.each do |assortment| %>
+  <div class='flex flex-row justify-center items-center w-2/3 mt-8'>
+    <%= render 'assortment_preview', :assortment => assortment %>
+  </div>
+<% end %>

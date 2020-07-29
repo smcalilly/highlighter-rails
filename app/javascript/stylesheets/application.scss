@@ -175,7 +175,7 @@
 }
 
 .btn-pink:hover {
-  @apply bg-purple-700;
+  @apply bg-purple-400;
 }
 
 .login-input {
@@ -197,9 +197,17 @@
   @apply shadow-outline;
 }
 
-.tags {
+.tags-sm {
   @apply text-xs;
   @apply text-purple-300
+}
+
+.tags {
+  @apply text-purple-300
+}
+
+.explainer-text {
+  @apply text-gray-600;
 }
 
 @import "tailwindcss/utilities";

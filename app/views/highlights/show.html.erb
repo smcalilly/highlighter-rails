@@ -1,22 +1,20 @@
 <div class='m-6'>
-  <%= link_to '< back to highlights', highlights_path %>
-  
   <section class='flex flex-row justify-center items-center w-full'>
     <div class='m-2 bg-white p-8 rounded shadow w-2/3'>
       <p>
         <%= @highlight.text %>
       </p>
 
-      <div class='text-center'>
-        <%= link_to @highlight.url, @highlight.url,  target: :_blank, class: 'text-center' %>
+      <div>
+        <%= link_to @highlight.url, @highlight.url,  target: :_blank, class: 'text-blue-400 text-xs' %>
       </div>
 
-      <div class='text-center pt-8'>
-          <%= link_to 'View more highlights', @highlight.source %>  from this source.
+      <div class='text-right mt-8'>
+          <%= link_to 'view more highlights from this source >', @highlight.source %>  
       </div>
       
       <div class='flex justify-between items-center mt-4'>
-        <%= link_to 'Delete', @highlight, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Delete', @highlight, method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-red-300' %>
         <%= render @highlight.tags %>
       </div>
     </div>

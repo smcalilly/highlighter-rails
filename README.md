@@ -17,7 +17,7 @@ Visit www.highlighter.online.
 ### Project
   A project is a writing project. It's a text editor with version control, plus a file system to improve the workflow. It allows a user to add tags to the project, which will automatically include any piece of content with the tag. Since a user can add any Note, Highlight, or Source to a project, and not just stuff with tags, the user is not bound to certain tags for a project, but typically tags are thematic to the project.
 ### Assortment
-  An assortment is a combination of tags. It's a way to combine related or unrelated pieces of content. It's mean to be a well to draw upon when writing or learning or whatever. This might typically be called a "Category," but the current name is Assortment. A project can have many Assortments.
+  An assortment is a combination of tags. It's a way to combine related or unrelated pieces of content. It's meant to be a well to draw upon when writing or learning or whatever. This might typically be called a "Category," but the current name is Assortment. A project can have many Assortments.
 
 
 I don't work with Rails much so I'm gonna save some useful commands here.

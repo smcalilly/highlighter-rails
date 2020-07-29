@@ -1,5 +1,12 @@
-<h1>New Source</h1>
+<div class='mt-8'>
+  <%= link_to '< back to sources', sources_path, class: 'm-8' %>
+  <p class='text-center'>A source is anything you can read in your browser.</p>
+  <div class='flex flex-col items-center mt-4'>
+    <div class='w-1/4 box flex flex-col items-center p-8'>
+    <h1 class='text-xl'>New Source</h1>
 
-<%= render 'form', source: @source %>
+    <%= render 'form', source: @source %>
 
-<%= link_to 'Back', sources_path %>
+    </div>
+  </div>
+</div>

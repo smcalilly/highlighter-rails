@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div>
     <%= form.label :title %>
-    <%= form.text_area :title %>
+    <%= form.text_field :title, class: 'login-input' %>
   </div>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location %>
+  <div>
+    <%= form.label 'URL' %>
+    <%= form.text_field :location, class: 'login-input' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class='text-center mt-8'>
+    <%= form.submit 'create source', class: 'btn-pink' %>
   </div>
 <% end %>

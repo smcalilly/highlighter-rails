@@ -1,0 +1,25 @@
+<div class='flex justify-center mt-8'>
+<section class='highlight-box text-align-center' id='extension'>
+  <h3 class="text-center text-xl font-bold box-header">Download the browser extension</h3>
+  <div class='flex flex-row justify-center m-4'>
+    <p class='w-4/5'>Hi, friend! The user experience is a little bumpy at the moment, 
+    but don't fret&mdash;your data will be safe and private.
+    In the meantime, <a href="mailto:smcalilly@gmail.com">please report</a> 
+    any bugs or suggestions for improvement.
+    </p>
+  </div>
+  <div class="flex flex justify-center">
+    <%= link_to(image_tag('firefox-badge.png', alt: 'Download for Firefox'), 
+      'https://addons.mozilla.org/en-US/firefox/addon/highlighter-online', 
+        class: 'download', id: 'firefox') 
+    %>
+    <%= link_to(image_tag('chrome-badge-small.png', alt: 'Download for Chrome'), 
+      'https://chrome.google.com/webstore/detail/highlighter/jhbdfidbplpijoncnlfooepldoleioga', 
+        class: 'download', id: 'chrome') 
+    %>
+  </div>
+  <div class='text-align-center margin-top'>
+    <p>Don't see your browser? <a href='https://forms.gle/EWhFUiKtR5QgzuRZ7' target="_blank">Request a download.</a></p>
+  </div>
+</section>
+</div>

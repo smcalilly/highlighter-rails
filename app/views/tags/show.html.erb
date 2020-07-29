@@ -1,7 +1,10 @@
-<h1>Content tagged with <%= @tag.name %></h1>
+<h1 class='text-center text-xl'>Content tagged with <%= @tag.name %></h1>
 
+<div class='flex justify-center mt-4'>
 <% @tag.notes.each do |note| %>
-  <%= render 'notes/note_preview', :note => note %>
+  <div class='w-2/3'>
+    <%= render 'notes/note_preview', :note => note %>
+  </div>
 <% end %>
 
 <ul>
@@ -9,3 +12,4 @@
     <li><%= link_to highlight.text, highlight_path(highlight) %></li>
   <% end %>
 </ul>
+</div>

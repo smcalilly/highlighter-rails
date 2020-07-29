@@ -1,5 +1,5 @@
 class MarketingController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :editor]
+  skip_before_action :authenticate_user!
 
   def index
     if user_signed_in?
@@ -9,5 +9,8 @@ class MarketingController < ApplicationController
 
   def editor
     @note = Note.new
+  end
+
+  def extension
   end
 end

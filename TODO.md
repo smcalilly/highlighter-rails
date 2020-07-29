@@ -10,9 +10,12 @@
 - report a bug or contact
 - improve home...link to see more notes etc, to create notes? add tags
 - adding new tags is bad UX...need something like hashtags
+- seed database and give basic ux direction
+- highlights#index -- download link to browser extensions
+- sources -- add tags to form
+- style assortment form
 
 ### features
-- assortment -- add authorization. style the views
 - add all the crud actions to the tags?
 - project
 - note syncing with my google notes
@@ -75,6 +78,8 @@ https://github.com/collectiveidea/audited
 - stupid ass bug with assortments#show rendering the model instance data like it's the console
 - home#index source link color is different than the others
 - does devise "remember me" work?
+- pagination
+- fix the highlight/source relationship to tags. which one does the tag belong to?
 
 ### tests
 - write tests for notes

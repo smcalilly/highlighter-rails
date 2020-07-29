@@ -1,8 +1,9 @@
 <div class='flex flex-col items-center justify-center w-full'>
   <header class='flex w-1/3 items-center justify-between m-4'>
     <h1 class='text-2xl'>Sources</h1>
-    <%= link_to 'New Source', new_source_path %>
+    <%= link_to 'New Source', new_source_path, class: 'text-red-300' %>
   </header>
+  <p class='explainer-text mb-6'>A source is anything you can read in your browser.</p>
 
   <% @sources.each do |source| %>
     <div class='flex flex-row justify-center items-center w-1/2'>

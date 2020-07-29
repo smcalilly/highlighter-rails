@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div>
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: 'login-input' %>
 
     <%= form.label :tags %>
-      <%= form.text_field :tag_list %>
+      <%= form.text_field :tag_list, class: 'login-input' %>
 
   </div>
     
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class='text-center mt-8'>
+    <%= form.submit 'create assortment', class: 'btn-pink' %>
   </div>
 <% end %>

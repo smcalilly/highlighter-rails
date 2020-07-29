@@ -2,8 +2,8 @@
   <div class='text-center text-yellow-500 font-bold'><%= flash[:alert] %></div>
 <% end %>
 
-<div>
-<div class='flex justify-center items-center'>
+
+<div class='flex justify-center items-center mt-8'>
   <div class='box flex flex-col items-center p-8'>
     <h2 class='text-xl font-bold m-6'>Edit <%= resource_name.to_s.humanize %></h2>
 
@@ -43,12 +43,11 @@
     <% end %>
   </div>
 </div>
-</div>
-<div>
-  <h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<div class='flex justify-center mt-8'>
+  <div class='box flex flex-col items-center p-8'>
+  <h3 class='text-xl mb-4'>Unhappy?</h3>
 
-<%= link_to "Back", :back %>
+  <%= button_to "Delete my account", registration_path(resource_name), data: { confirm: "This action will destroy all of your writing. Proceed if that's what you want." }, method: :delete, class: 'btn-pink' %>
 </div>
 </div>
