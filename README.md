@@ -67,6 +67,9 @@ thanks to this gem https://github.com/vmg/redcarpet
 and one that renders it on change in the client (need to test that they work well together)
 some code to read again http://vaidehijoshi.github.io/blog/2015/08/11/rolling-out-the-redcarpet-for-rendering-markdown/
 
+## postgres
+https://rollout.io/blog/unleash-the-power-of-storing-json-in-postgres/
+
 ## etc
 tagging: https://laragon.org/rails/tagging.html
 polymorphism: https://cobwwweb.com/rails-has-many-through-polymorphic-association

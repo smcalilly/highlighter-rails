@@ -8,12 +8,11 @@
 - restyle error flashes
 - responsive!!
 - report a bug or contact
-- improve home...link to see more notes etc, to create notes? add tags
+- improve home...link to see more notes. pagination
 - adding new tags is bad UX...need something like hashtags
 - seed database and give basic ux direction
-- highlights#index -- download link to browser extensions
 - sources -- add tags to form
-- style assortment form
+- sources preview too short. how to make that better? title field?
 
 ### features
 - add all the crud actions to the tags?
@@ -80,6 +79,7 @@ https://github.com/collectiveidea/audited
 - does devise "remember me" work?
 - pagination
 - fix the highlight/source relationship to tags. which one does the tag belong to?
+- how efficient is the database, especially the tags? so many loads when home page is requested
 
 ### tests
 - write tests for notes
