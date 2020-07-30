@@ -81,4 +81,5 @@ https://blog.55minutes.com/2012/02/untangling-the-rails-asset-pipeline-part-1-ca
 
 - turbolink weirdness causing [redirect to get stuck loading after sign in](https://stackoverflow.com/questions/62499186/devise-redirect-to-on-successful-login-seems-to-get-stuck-on-first-login-attempt)
 
-- more rails weirdness 
+- more rails weirdness https://stackoverflow.com/questions/31857365/rails-generate-commands-hang-when-trying-to-create-a-model
+after resetting bin, you'll need to do `$ bundle exec rails webpacker:binstubs`
