@@ -8,7 +8,8 @@ class User < ApplicationRecord
   has_many :sources
   has_many :notes
   has_many :assortments
+  has_many :projects
 
-  # not sure i follow this?
+  # not sure i understand what this is doing? is this from v1 of tagging?
   has_many :tags, :through => :notes
 end

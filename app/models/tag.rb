@@ -8,4 +8,6 @@ class Tag < ApplicationRecord
             :source_type => 'Highlight'
   has_many :assortments, :through => :taggings, :source => :taggable,
             :source_type => 'Assortment'
+  has_many :projects, :through => :projects, :source => :taggable,
+            :source_type => 'Project'
 end

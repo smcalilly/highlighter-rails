@@ -1,0 +1,12 @@
+<div class='mt-8'>
+  <%= link_to '< back to projects', projects_path, class: 'm-8' %>
+  <p class='text-center'>Enter your project name and any associated tags.</p>
+  <div class='flex flex-col items-center mt-4'>
+    <div class='w-1/4 box flex flex-col items-center p-8'>
+    <h1 class='text-xl mb-4'>New Project</h1>
+
+    <%= render 'form', project: @project %>
+
+    </div>
+  </div>
+</div>

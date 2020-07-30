@@ -1,0 +1,20 @@
+<div class='flex flex-row justify-around items-center mt-4'>
+  <h1 class='text-2xl font-bold'>Projects</h1>
+  <%= link_to 'New Project', new_project_path, class: 'text-red-300' %>
+</div>
+
+<div class='flex flex-col items-center mt-4'>
+  <p class='w-2/3 explainer-text'>A project is where you write your <span class='tags'>#new-book</span>. Writing doesn't happen within one document, but instead an entire project. With a draft, a notebook, a folder sytem, and all of your taggable content in one place, projects help you keep it all together.</p>
+  <br/>
+  <p class='w-2/3 explainer-text'>You can add tags to a project, so that any content with the project's tag will be included as a part of the project.</p>
+  <br/>
+  <p class='w-2/3 explainer-text'>For example, you have a ton of notes with the <span class='tags'>#new-book</span> tag. You can add that tag to your project and all of your <span class='tags'>#new-book</span> notes are available inside the project. It's basically your well to drawn upon, as you sculpt and tweak.</p>
+  <br/>
+  <p class='w-2/3 explainer-text'>Projects also have version control, so you can delete your favorite sentences while still keeping them around.</p>
+</div>
+
+<% @projects.each do |project| %>
+  <div class='flex flex-row justify-center items-center w-2/3 mt-8'>
+    <%= render 'project_preview', :project => project %>
+  </div>
+<% end %>

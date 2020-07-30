@@ -17,6 +17,7 @@
 - fix the highlight/source relationship to tags. which one does the tag belong to?
 - how efficient is the database, especially the tags? so many loads when home page is requested
 - refactor json api into it's own controllers
+- project is bringing duplicates for items with the same tags
 
 ### UX/UI
 - marketing to about...can't access it when logged in bc of the way my authentication is setup

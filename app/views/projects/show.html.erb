@@ -1,12 +1,16 @@
 <div class='flex flex-row justify-around items-center mt-4'>
-  <h1 class='text-2xl font-bold'><%= @assortment.name %></h1>
-  <%= link_to 'edit', edit_assortment_path, class: 'text-red-300' %>
+  <h1 class='text-2xl font-bold'><%= @project.title %></h1>
+  <%= link_to 'edit', edit_project_path, class: 'text-red-300' %>
 </div>
 <div class='flex items-center justify-center flex-col mt-4'>
-  <% @assortment.tags.each do |tag| %>
+  <div class='flex flex-row items-center justify-center'>
+    Tags:
+    <% @project.tags.each do |tag| %>
+      <%= render 'tags/tag', :tag => tag %>
+    <% end %>
+  </div>
 
-    <%= render 'tags/tag', :tag => tag %>
-    
+  <% @project.tags.each do |tag| %>
     <% tag.notes.each do |note| %>
       <div class='w-2/3'>
         <%= render 'notes/note_preview', :note => note %>

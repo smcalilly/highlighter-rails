@@ -12,7 +12,6 @@ class AssortmentsController < ApplicationController
   end
 
   def new
-    @tags = policy_scope(Tag)
     @assortment = Assortment.new
   end
 

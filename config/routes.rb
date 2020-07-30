@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :assortments
   # setup for the json api
   devise_for :users, 
     :controllers => { 
@@ -29,4 +28,6 @@ Rails.application.routes.draw do
   resources :sources, only: [:index, :show, :new, :create, :destroy]
   resources :notes
   resources :tags
+  resources :assortments
+  resources :projects
 end
