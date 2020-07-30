@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_30_203037) do
+ActiveRecord::Schema.define(version: 2020_07_30_212005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,15 @@ ActiveRecord::Schema.define(version: 2020_07_30_203037) do
     t.index ["user_id"], name: "index_assortments_on_user_id"
   end
 
+  create_table "drafts", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.bigint "project_id", null: false
+    t.index ["project_id"], name: "index_drafts_on_project_id"
+    t.index ["user_id"], name: "index_drafts_on_user_id"
+  end
+
   create_table "highlights", force: :cascade do |t|
     t.text "text"
     t.string "url"
@@ -71,6 +80,8 @@ ActiveRecord::Schema.define(version: 2020_07_30_203037) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "body"
     t.string "name"
+    t.bigint "draft_id"
+    t.index ["draft_id"], name: "index_notes_on_draft_id"
     t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
@@ -135,8 +146,11 @@ ActiveRecord::Schema.define(version: 2020_07_30_203037) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "assortments", "users"
+  add_foreign_key "drafts", "projects"
+  add_foreign_key "drafts", "users"
   add_foreign_key "highlights", "sources"
   add_foreign_key "highlights", "users"
+  add_foreign_key "notes", "drafts"
   add_foreign_key "notes", "users"
   add_foreign_key "projects", "users"
   add_foreign_key "sources", "users"
