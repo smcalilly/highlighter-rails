@@ -19,12 +19,10 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(project_params)
-    @project.user = current_user
-    @tags = find_or_create_tags(project_params, current_user.id)
-    @project.tags = @tags
+    @project = create_project
 
-    authorize @project
+    puts 'project'
+    puts @project
 
     respond_to do |format|
       if @project.save
@@ -61,6 +59,28 @@ class ProjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
+    end
+
+    def create_project
+      @project = Project.new(project_params)
+      @project.user = current_user
+      @tags = find_or_create_tags(project_params, current_user.id)
+      @project.tags = @tags
+      authorize @project
+      @project.save!
+      
+      @draft = create_draft(current_user, @project)
+
+      return @project
+    end
+
+    def create_draft(user, project)
+      @draft = Draft.new
+      @draft.user = user
+      @draft.project = project
+      @draft.save!
+      Note.new(name: 'draft', draft_id: @draft.id)
+      return @draft
     end
 
     # Only allow a list of trusted parameters through.
