@@ -11,6 +11,8 @@ class NotesController < ApplicationController
   def show
     @markdown = generate_markdown
     @no_markdown = no_markdown
+    puts 'note'
+    puts @note
   end
 
   def new
