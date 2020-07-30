@@ -1,7 +1,7 @@
 
   <%= render "shared/content_preview" do %>
     <div class='flex flex-row items-center justify-between'>
-      <div class='flex flex-col'>
+      <div class='flex flex-col overflow-hidden'>
         <span>
           <%= link_to(highlight, class: 'text-green-600 font-bold text-lg') do %>
             <%= truncate(highlight.url) %>
