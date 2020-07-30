@@ -78,3 +78,7 @@ polymorphism: https://cobwwweb.com/rails-has-many-through-polymorphic-associatio
 rm -fr tmp/cache
 https://stackoverflow.com/questions/7042440/rails-using-cached-application-css-despite-changes
 https://blog.55minutes.com/2012/02/untangling-the-rails-asset-pipeline-part-1-caches-and-compass/
+
+- turbolink weirdness causing [redirect to get stuck loading after sign in](https://stackoverflow.com/questions/62499186/devise-redirect-to-on-successful-login-seems-to-get-stuck-on-first-login-attempt)
+
+- more rails weirdness 
