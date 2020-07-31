@@ -19,14 +19,14 @@ module RailsApp
     # include lib directory
     config.autoload_paths << Rails.root.join('lib')
 
-    config.middleware.insert_before 0, Rack::Cors, :debug => true, :logger => (-> { Rails.logger }) do
-      allow do
-        origins ['moz-extension://ce763ad1-e4f3-ca4d-b974-810788b069ca', 'chrome-extension://jhbdfidbplpijoncnlfooepldoleioga']
+    # config.middleware.insert_before 0, Rack::Cors, :debug => true, :logger => (-> { Rails.logger }) do
+    #   allow do
+    #     origins ['moz-extension://ce763ad1-e4f3-ca4d-b974-810788b069ca', 'chrome-extension://jhbdfidbplpijoncnlfooepldoleioga']
 
-        resource 'highlights', 
-          headers: :any, 
-          methods: [:get, :post, :options]
-      end
-    end
+    #     resource '/api/*', 
+    #       headers: :any, 
+    #       methods: [:get, :post, :options]
+    #   end
+    # end
   end
 end

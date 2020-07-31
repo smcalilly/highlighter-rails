@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-  respond_to :json
+  respond_to :json #don't think this is needed? would assume a user is trying to sign up via extension
 
   def install
   end

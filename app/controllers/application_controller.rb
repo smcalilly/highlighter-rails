@@ -1,18 +1,13 @@
 class ApplicationController < ActionController::Base
   include Pundit
-  protect_from_forgery unless: -> { request.format.json? }
-  before_action :authenticate_request, if: :json_request
+
+  # turn off CSRF and let the api controllers handle authentication
+  protect_from_forgery unless: :json_request
   before_action :authenticate_user!, unless: :json_request
-  before_action :enable_http_logger
 
   private
   def json_request
     request.format.json?
-  end
-
-  def authenticate_request
-    @current_user = AuthorizeApiRequest.call(request.headers).result
-    render json: { error: 'Not Authorized' }, status: 401 unless @current_user
   end
 
   def after_sign_in_path_for(resource)

@@ -10,6 +10,12 @@
     <% end %>
   </div>
 
+  <div class='flex flex-row items-center justify-center'>
+    <% @project.draft.notes.each do |note| %>
+      <%= render 'notes/note_preview', :note => note %>
+    <% end %>
+  </div>
+
   <% @project.tags.each do |tag| %>
     <% tag.notes.each do |note| %>
       <div class='w-2/3'>

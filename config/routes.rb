@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, 
     :controllers => { 
       sessions: 'sessions', 
-      registrations: 'registrations' 
+      registrations: 'registrations'
     }
 
   devise_scope :user do
@@ -11,7 +11,10 @@ Rails.application.routes.draw do
     get 'users/welcome', :to => 'registrations#welcome'
   end
 
-  post 'authenticate', to: 'authentication#authenticate'
+  # api routes for browser extension
+  post 'api/authenticate', to: 'api/authentication#authenticate'
+  get 'api/highlights/current' => 'api/highlights#current', :as => :current, :format => 'json'
+  post 'api/highlights', to: 'api/highlights#create'
 
   # landing page for marketing
   root to: 'marketing#index'
@@ -19,10 +22,6 @@ Rails.application.routes.draw do
   get 'extension', :to => 'marketing#extension'
 
   get 'home', :to => 'home#index'
- 
-
-  # don't know rails so i have to set this route
-  get 'highlights/current' => 'highlights#current', :as => :current, :format => 'json'
 
   resources :highlights
   resources :sources, only: [:index, :show, :new, :create, :destroy]

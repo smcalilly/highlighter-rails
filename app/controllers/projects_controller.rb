@@ -79,7 +79,8 @@ class ProjectsController < ApplicationController
       @draft.user = user
       @draft.project = project
       @draft.save!
-      Note.new(name: 'draft', draft_id: @draft.id)
+      @note = Note.new(name: 'main', draft_id: @draft.id, user_id: user.id, body: '')
+      @note.save!
       return @draft
     end
 
