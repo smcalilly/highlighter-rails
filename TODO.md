@@ -18,6 +18,8 @@
 - how efficient is the database, especially the tags? so many loads when home page is requested
 - refactor json api into it's own controllers
 - project is bringing duplicates for items with the same tags
+- read up on pundit to make sure i'm doing authorization right
+- wtf is up with my cors? how is that not throwing errors?
 
 ### UX/UI
 - marketing to about...can't access it when logged in bc of the way my authentication is setup
@@ -56,6 +58,7 @@
 - Download the document as md, html, plain text, pdf
 
 ## projects
+https://github.com/brendon/acts_as_list
 - project has many folders, has many tags
 - document (has many notes...can be a new note or add copies of actual notes. one note must be the final draft)
 - sources

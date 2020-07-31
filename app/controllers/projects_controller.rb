@@ -20,10 +20,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = create_project
-
-    puts 'project'
-    puts @project
-
+    
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'project was successfully created.' }
@@ -69,19 +66,9 @@ class ProjectsController < ApplicationController
       authorize @project
       @project.save!
       
-      @draft = create_draft(current_user, @project)
+      @draft = Draft.create_draft(current_user, @project)
 
       return @project
-    end
-
-    def create_draft(user, project)
-      @draft = Draft.new
-      @draft.user = user
-      @draft.project = project
-      @draft.save!
-      @note = Note.new(name: 'main', draft_id: @draft.id, user_id: user.id, body: '')
-      @note.save!
-      return @draft
     end
 
     # Only allow a list of trusted parameters through.
