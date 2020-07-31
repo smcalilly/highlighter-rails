@@ -15,11 +15,12 @@
 - does devise "remember me" work?
 - pagination
 - fix the highlight/source relationship to tags. which one does the tag belong to?
-- how efficient is the database, especially the tags? so many loads when home page is requested
-- refactor json api into it's own controllers
+
 - project is bringing duplicates for items with the same tags
-- read up on pundit to make sure i'm doing authorization right
+
+### huh?
 - wtf is up with my cors? how is that not throwing errors?
+- how efficient is the database, especially the tags? so many loads when home page is requested
 
 ### UX/UI
 - marketing to about...can't access it when logged in bc of the way my authentication is setup
@@ -33,6 +34,7 @@
 - seed database for new users and give basic ux direction
 - sources -- add tags to form
 - sources preview too short. how to make that better? title field?
+- forgot password form
 
 ### features
 - add all the crud actions to the tags?
@@ -43,6 +45,9 @@
 ### notes
 - paging
 - search
+
+### refactor
+- DRY pundit policies "Encapsulate a set of permissions into a module and include them in multiple policies. Use alias_method to make some permissions behave the same as others. Inherit from a base set of permissions. Use metaprogramming if you really have to."
 
 ### editor
 - ajax on submit, "not saved", "last saved" ... click "save changes" with no user feedback

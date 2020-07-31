@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
 
   def enable_http_logger
     if Rails.env.development?
+      # keep myself from making a mistake
+      after_action :verify_authorized
+      after_action :verify_policy_scoped
+
       require 'http_logger'
     end
   end

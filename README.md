@@ -70,6 +70,9 @@ some code to read again http://vaidehijoshi.github.io/blog/2015/08/11/rolling-ou
 ## postgres
 https://rollout.io/blog/unleash-the-power-of-storing-json-in-postgres/
 
+## pundit
+[the pundit gem](https://github.com/varvet/pundit) provides authorization
+
 ## etc
 tagging: https://laragon.org/rails/tagging.html
 polymorphism: https://cobwwweb.com/rails-has-many-through-polymorphic-association
