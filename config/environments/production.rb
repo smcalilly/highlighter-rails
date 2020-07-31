@@ -1,15 +1,15 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  # devise mailer
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.default_url_options = { host: 'high-lighter.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { host: 'high-lighter.herokuapp.com' }
   ActionMailer::Base.smtp_settings = {
-    :user_name => 'apikey',
-    :password => Rails.application.credentials.dig(:jwt_base),
-    :domain => 'highlighter.online',
+    :user_name => ENV['HEROKU_SENDGRID_USERNAME'],
+    :password => ENV['HEROKU_SENDGRID_PASSWORD'],
+    :domain => 'heroku.com',
     :address => 'smtp.sendgrid.net',
-    :port => 587,
+    :port => 25,
     :authentication => :plain,
     :enable_starttls_auto => true
   }
