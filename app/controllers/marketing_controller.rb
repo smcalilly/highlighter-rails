@@ -8,7 +8,7 @@ class MarketingController < ApplicationController
   end
 
   def editor
-    @note = Note.new
+    @note = Note.find(5)
   end
 
   def extension
