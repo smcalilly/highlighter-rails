@@ -1,4 +1,9 @@
 <h1 class='text-center text-2xl text-gray-800'>
-  <%= @note_name %>
+  <% if note.name %>
+    <%= note.name %>
+  <%  else %>
+    <%= truncate(@no_markdown.render(note.body)) %>
+  <%  end %>
+  
 </h1>
 <p class='text-center text-sm text-gray-600'>last changed:  <%= @note.updated_at.strftime("%m-%d-%Y") %></p>
