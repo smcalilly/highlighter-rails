@@ -9,12 +9,12 @@
 - back to notes when i'm on home and look at a note. it takes me bacck to notes and not back home, where i was. weird and bad ux.
 - validation on tags
 - pagination for models indexing
-- not sure i follow this? models/user.rb `has_many :tags, :through => :notes`
 - more semantic html...specifically ul/li for nav and maybe ul/li for content items
 - home#index source link color is different than the others
 - does devise "remember me" work?
 - pagination
 - fix the highlight/source relationship to tags. which one does the tag belong to?
+- devise sign  up redirect bug (just like the sign in bug)
 
 - project is bringing duplicates for items with the same tags
 
@@ -34,7 +34,6 @@
 - seed database for new users and give basic ux direction
 - sources -- add tags to form
 - sources preview too short. how to make that better? title field?
-- forgot password form
 
 ### features
 - add all the crud actions to the tags?
