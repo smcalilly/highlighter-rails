@@ -29,7 +29,7 @@ Visit www.highlighter.online.
   - `#<Assortment id: nil, name: nil, created_at: nil, updated_at: nil, user_id: nil>`
 ### Tagging
   Polymorphic table that holds the association between tags and the various taggable content types.
-  `#<Tagging id: nil, tag_id: nil, created_at: nil, updated_at: nil, taggable_type: nil, taggable_id: nil>`
+  - `#<Tagging id: nil, tag_id: nil, created_at: nil, updated_at: nil, taggable_type: nil, taggable_id: nil>`
 
 
 I don't work with Rails much so I'm gonna save some useful commands here.
