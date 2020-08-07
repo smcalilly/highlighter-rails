@@ -15,8 +15,10 @@
 - does devise "remember me" work?
 - pagination
 - fix the highlight/source relationship to tags. which one does the tag belong to?
-
+- remove url field from highlight
 - project is bringing duplicates for items with the same tags
+- note from a draft shouldn't be included with all notes
+- nav from dropdown not keyboard accessible
 
 ### huh?
 - wtf is up with my cors? how is that not throwing errors?
@@ -34,7 +36,8 @@
 - seed database for new users and give basic ux direction
 - sources -- add tags to form
 - sources preview too short. how to make that better? title field?
-- forgot password form
+- style forgot password form
+- 2fa
 
 ### features
 - add all the crud actions to the tags?
