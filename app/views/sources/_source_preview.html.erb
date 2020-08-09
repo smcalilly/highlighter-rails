@@ -1,3 +1,5 @@
 <%= render "shared/content_preview" do %>
-  <%= link_to truncate(source.location), source, class: 'text-green-600 font-bold text-lg' %> 
+  <div class='overflow-hidden'>
+    <%= link_to truncate(source.location), source, class: 'text-green-600 font-bold text-lg' %> 
+  <div>
 <% end %>
