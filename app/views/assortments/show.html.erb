@@ -8,15 +8,15 @@
     <%= render 'tags/tag', :tag => tag %>
     
     <% tag.notes.each do |note| %>
-      <div class='w-2/3'>
+      <ul class='w-2/3'>
         <%= render 'notes/note_preview', :note => note %>
-      </div>
+      </ul>
     <% end %>
 
     <% tag.highlights.each do |highlight| %>
-      <div class='w-2/3'>
+      <ul class='w-2/3'>
         <%= link_to highlight.text, highlight_path(highlight) %>
-      </div>
+      </ul>
     <% end %>
   <% end %>
 </div>

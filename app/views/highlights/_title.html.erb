@@ -10,9 +10,9 @@
         </span>
       </div>
       
-      <div class='flex flex-row'>
+      <ul class='flex flex-row'>
         <%= render highlight.tags %>
-      </div>
+      </ul>
     </div>
     
     <p class='text-sm text-gray-600'><%= truncate(@highlight.text, :length => 120) %>

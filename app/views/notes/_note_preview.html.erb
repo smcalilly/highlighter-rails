@@ -16,9 +16,9 @@
         <p class='text-xs text-gray-400'><%= note.updated_at.strftime("%m-%d-%Y") %></p>
       </div>
       
-      <div class='flex flex-row'>
+      <ul class='flex flex-row'>
         <%= render note.tags %>
-      </div>
+      </ul>
     </div>
     
     <p class='text-sm text-gray-600'><%= truncate(@no_markdown.render(note.body), :length => 120) %></p>

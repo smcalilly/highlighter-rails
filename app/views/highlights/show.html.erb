@@ -15,7 +15,9 @@
       
       <div class='flex justify-between items-center mt-4'>
         <%= link_to 'Delete', @highlight, method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-red-300' %>
-        <%= render @highlight.tags %>
+        <ul>
+          <%= render @highlight.tags %>
+        </ul>
       </div>
     </div>
   </section>

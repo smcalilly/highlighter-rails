@@ -1,7 +1,9 @@
 <%= render "shared/content_box" do %>
   <p><%= highlight.text %></p>
 
+  <ul>
   <%= render highlight.tags %>
+  </ul>
         
   <div class='time-stamp text-left'>
     <%= highlight.created_at %>

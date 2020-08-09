@@ -5,9 +5,9 @@
   </header>
   <p class='explainer-text mb-6'>A source is anything you can read in your browser.</p>
 
-  <% @sources.each do |source| %>
-    <div class='flex flex-row justify-center items-center w-1/2'>
+  <ul class='flex flex-row justify-center items-center w-1/2'>
+    <% @sources.each do |source| %>
       <%= render 'source_preview', :source => source %>
-    </div>
-  <% end %>
+    <% end %>
+  </ul>
 </div>

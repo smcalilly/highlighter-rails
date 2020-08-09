@@ -2,24 +2,29 @@
 - FIX TAG POLICY BUG!
 - delete tag and remove any references 
 - dependent: destroy on new models?
-- https://github.com/rails/webpacker/issues/2288
-- time display is wrong time zone
-- purgecss to remove unused tailwind
-- html input active when visting page
-- back to notes when i'm on home and look at a note. it takes me bacck to notes and not back home, where i was. weird and bad ux.
 - validation on tags
-- pagination for models indexing
-- more semantic html...specifically ul/li for nav and maybe ul/li for content items
-- home#index source link color is different than the others
-- does devise "remember me" work?
-- pagination
 - fix the highlight/source relationship to tags. which one does the tag belong to?
-- remove url field from highlight
-- devise sign  up redirect bug (just like the sign in bug)
 
-- project is bringing duplicates for items with the same tags
+- https://github.com/rails/webpacker/issues/2288
+- purgecss to remove unused tailwind
+
+- time display is wrong time zone
+- html input active when visting page
+
 - note from a draft shouldn't be included with all notes
+- project is bringing duplicates for items with the same tags
+- remove url field from highlight
+- pagination for models indexing
+
+- back to notes when i'm on home and look at a note. it takes me bacck to notes and not back home, where i was. weird and bad ux.
+- home#index source link color is different than the others
 - nav from dropdown not keyboard accessible
+- not mobile friendly
+- improve typography!
+
+- devise sign  up redirect bug (just like the sign in bug)
+- does devise "remember me" work?
+
 
 ### huh?
 - wtf is up with my cors? how is that not throwing errors?

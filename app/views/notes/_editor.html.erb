@@ -27,4 +27,8 @@
     </div>
 <% end %>
 
-<div class='m-8'>see content with these tags: <%= render @note.tags %></div>
+<div class='m-8'>see content with these tags: 
+  <ul>
+    <%= render @note.tags %>
+  </ul>
+</div>

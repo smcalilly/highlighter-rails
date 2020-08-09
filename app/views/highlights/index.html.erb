@@ -6,8 +6,8 @@
   <p class='explainer-text mb-6'>A highlight is a passage of text from a source. You can only save these with <%= link_to 'the browser extension.', extension_path %></p>
 
   <% @highlights.each do |highlight| %>
-    <div class='flex flex-row justify-center items-center w-1/2'>
+    <ul class='flex flex-row justify-center items-center w-1/2'>
       <%= render 'highlights/highlight_preview', :highlight => highlight %>
-    </div>
+    </ul>
   <% end %>
 </div>

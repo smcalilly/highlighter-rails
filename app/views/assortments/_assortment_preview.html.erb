@@ -1,6 +1,7 @@
-<div class='w-1/3'>
-  <%= render "shared/content_preview" do %>
-    <%= link_to assortment.name, assortment %>
-    <div class='flex flex-row'><%= render assortment.tags %></div>
-  <% end %>
-</div>
+<%= render "shared/content_preview" do %>
+  <%= link_to assortment.name, assortment %>
+  
+  <ul class='flex flex-row'>
+    <%= render assortment.tags %>
+  </ul>
+<% end %>
