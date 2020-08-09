@@ -17,7 +17,6 @@
 - pagination for models indexing
 
 - back to notes when i'm on home and look at a note. it takes me bacck to notes and not back home, where i was. weird and bad ux.
-- home#index source link color is different than the others
 - nav from dropdown not keyboard accessible
 - not mobile friendly
 - improve typography!
