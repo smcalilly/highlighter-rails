@@ -18,6 +18,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'rack-cors'
 gem 'devise'
+gem 'devise-two-factor'
 gem 'jwt'
 gem 'simple_command'
 gem 'pundit'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_30_212005) do
+ActiveRecord::Schema.define(version: 2020_07_31_195816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,8 +108,6 @@ ActiveRecord::Schema.define(version: 2020_07_30_212005) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "taggable_type", null: false
     t.bigint "taggable_id", null: false
-    t.bigint "project_id"
-    t.index ["project_id"], name: "index_taggings_on_project_id"
     t.index ["tag_id"], name: "index_taggings_on_tag_id"
     t.index ["taggable_type", "taggable_id"], name: "index_taggings_on_taggable_type_and_taggable_id"
   end
@@ -154,7 +152,6 @@ ActiveRecord::Schema.define(version: 2020_07_30_212005) do
   add_foreign_key "notes", "users"
   add_foreign_key "projects", "users"
   add_foreign_key "sources", "users"
-  add_foreign_key "taggings", "projects"
   add_foreign_key "taggings", "tags"
   add_foreign_key "tags", "users"
 end

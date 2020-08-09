@@ -28,7 +28,6 @@
 ### UX/UI
 - marketing to about...can't access it when logged in bc of the way my authentication is setup
 - 404 page
-- setup mailer
 - restyle error flashes
 - responsive!!
 - report a bug or contact
@@ -39,6 +38,7 @@
 - sources preview too short. how to make that better? title field?
 - style forgot password form
 - 2fa
+- improve user mailer text and html
 
 ### features
 - add all the crud actions to the tags?

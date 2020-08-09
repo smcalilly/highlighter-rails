@@ -31,16 +31,21 @@ Visit www.highlighter.online.
   Polymorphic table that holds the association between tags and the various taggable content types.
   `#<Tagging id: nil, tag_id: nil, created_at: nil, updated_at: nil, taggable_type: nil, taggable_id: nil>`
 
-
-I don't work with Rails much so I'm gonna save some useful commands here.
+***
+# useful commands
 
 ## heroku commands
 `heroku logs --tail --app=high-lighter`  
 `heroku run rails console`   
 `heroku run rake db:migrate` (need to move this to a procfile)  
+`heroku config:set GITHUB_USERNAME=me`  
 
 ## development stuff
-`kill -9 $(lsof -i :3000 -t)`
+`kill -9 $(lsof -i :3000 -t)`  
+
+### create a new key and update secrets.yml
+`bundle exec rake secret`  
+`EDITOR="nano" rails credentials:edit`  
 
 
 ### Add a reference to a model

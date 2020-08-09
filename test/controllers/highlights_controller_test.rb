@@ -32,7 +32,7 @@ class HighlightsControllerTest < ActionDispatch::IntegrationTest
     get highlights_url
     assert_redirected_to '/users/sign_in'
 
-    # multi-tenancy: should not get anything from another user
+    # authorization: should not get anything from another user
     login_user_via_ui
     get highlight_url(@unauthorized_highlight)
     assert_redirected_to highlights_url
@@ -77,7 +77,7 @@ class HighlightsControllerTest < ActionDispatch::IntegrationTest
     get highlight_url(@highlight)
     assert_redirected_to '/users/sign_in'
 
-    # multi-tenancy: should not show anything from another account
+    # authorization: should not show anything from another account
     login_user_via_ui
     get highlight_url(@unauthorized_highlight)
     assert_response :redirect
@@ -94,7 +94,7 @@ class HighlightsControllerTest < ActionDispatch::IntegrationTest
     get edit_highlight_url(@highlight)
     assert_redirected_to '/users/sign_in'
 
-    # multi-tenancy: should not show anything from another account
+    # authorization: should not show anything from another account
     login_user_via_ui
     get edit_highlight_url(@unauthorized_highlight)
     assert_redirected_to highlights_url
@@ -112,7 +112,7 @@ class HighlightsControllerTest < ActionDispatch::IntegrationTest
     patch highlight_url(@highlight), params: { highlight: { text: @highlight.text, url: @highlight.url } }
     assert_redirected_to '/users/sign_in'
 
-    # multi-tenancy: should not show anything from another account
+    # authorization: should not show anything from another account
     login_user_via_ui
     patch highlight_url(@unauthorized_highlight), params: { highlight: { text: @highlight.text, url: @highlight.url } }
     assert_redirected_to highlights_url
@@ -132,7 +132,7 @@ class HighlightsControllerTest < ActionDispatch::IntegrationTest
     end
     assert_redirected_to '/users/sign_in'
 
-    # multi-tenancy: should not delete anything from another account
+    # authorization: should not delete anything from another account
     login_user_via_ui
     assert_difference('Highlight.count', 0) do
       delete highlight_url(@unauthorized_highlight)

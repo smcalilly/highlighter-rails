@@ -10,9 +10,7 @@ class Api::ApiBaseController < ApplicationController
   end
 
   def authenticate_request
-    puts 'authenticate request'
     @current_user = AuthorizeApiRequest.call(request.headers).result
-    puts @current_user
     render json: { error: 'Not Authorized' }, status: 401 unless @current_user
   end
 end

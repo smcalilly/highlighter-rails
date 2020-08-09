@@ -10,7 +10,4 @@ class User < ApplicationRecord
   has_many :assortments
   has_many :projects
   has_many :drafts
-
-  # not sure i understand what this is doing? is this from v1 of tagging?
-  has_many :tags, :through => :notes
 end
