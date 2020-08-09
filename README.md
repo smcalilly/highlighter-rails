@@ -1,5 +1,5 @@
-# Hi Writer
-Hi Writer is an app for your messy brain. It is a writing tool with version control so you can kill your darlings without losing them forever. It is a browser extension to help you read. It organizes your projects like a filing cabinet, but with better sorting and searching. It is your new treasure chest. 
+# Hi-Writer
+Hi-Writer is an app for your messy brain. It is a writing tool with version control so you can kill your darlings without losing them forever. It is a browser extension to help you read. It organizes your projects like a filing cabinet, but with better sorting and searching. It is your new treasure chest. 
 
 In tech speak, it's a text editor for writers with a file system-like workflow and version control.
 
@@ -29,7 +29,7 @@ Visit www.highlighter.online.
   - `#<Assortment id: nil, name: nil, created_at: nil, updated_at: nil, user_id: nil>`
 ### Tagging
   Polymorphic table that holds the association between tags and the various taggable content types.
-  `#<Tagging id: nil, tag_id: nil, created_at: nil, updated_at: nil, taggable_type: nil, taggable_id: nil>`
+  - `#<Tagging id: nil, tag_id: nil, created_at: nil, updated_at: nil, taggable_type: nil, taggable_id: nil>`
 
 ***
 # useful commands
