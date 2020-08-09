@@ -63,6 +63,7 @@
 - version control
 - delete note
 - md cheat sheet popup
+- https://github.com/rails/rails/commit/0decd2ddc4a94cf522fc8ea8e6c73b9deedfdd93
 
 ## home
 - search by tag
