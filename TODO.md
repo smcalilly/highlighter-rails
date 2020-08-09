@@ -36,6 +36,7 @@
 - responsive!!
 - report a bug or contact
 - improve home...link to see more notes. pagination
+- give each content type a more distinguishable style so that they're visually different
 - adding new tags is bad UX...need something like hashtags
 - seed database for new users and give basic ux direction
 - sources -- add tags to form
