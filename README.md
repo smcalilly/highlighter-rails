@@ -101,5 +101,5 @@ polymorphism: https://cobwwweb.com/rails-has-many-through-polymorphic-associatio
 
 - turbolink weirdness causing [redirect to get stuck loading after sign in](https://stackoverflow.com/questions/62499186/devise-redirect-to-on-successful-login-seems-to-get-stuck-on-first-login-attempt)
 
-- more rails weirdness https://stackoverflow.com/questions/31857365/rails-generate-commands-hang-when-trying-to-create-a-model
+- **don't do this!** more rails weirdness https://stackoverflow.com/questions/31857365/rails-generate-commands-hang-when-trying-to-create-a-model
 after resetting bin, you'll need to do `$ bundle exec rails webpacker:binstubs`
