@@ -2,7 +2,7 @@ class DocumentsController < ApplicationController
 	before_action :set_document, only: [:show, :edit, :update, :destroy]
 
     def index
-			@documents = Document.all #policy_scope(Document)
+			@documents = policy_scope(Document)
 		end
 		
 		def show
@@ -17,13 +17,13 @@ class DocumentsController < ApplicationController
 
 		def create
 			@document = Document.new(document_params)
-			# @document.user = current_user
-			# authorize @document
+			@document.user = current_user
+			authorize @document
 
     	respond_to do |format|
       	if @document.save
         	format.html { redirect_to @document, notice: 'Document was successfully created.' }
-        	# format.json { render :show, status: :created, location: @document }
+        	format.json { render :show, status: :created, location: @document }
       	else
         	format.html { render :new }
         	format.json { render json: @document.errors, status: :unprocessable_entity }
@@ -34,6 +34,7 @@ class DocumentsController < ApplicationController
     def update
       respond_to do |format|
         if @document.update(document_params)
+          format.js { render :js => 'Document saved!' }
           format.html { redirect_to @document, notice: 'document was successfully updated.' }
           format.json { render :show, status: :ok, location: @document }
         else
@@ -54,7 +55,7 @@ class DocumentsController < ApplicationController
 	
 		private
 			def set_document
-				@document = Document.find(params[:id]) #policy_scope(Document).find(params[:id])
+				@document = policy_scope(Document).find(params[:id])
 			rescue
 				redirect_to documents_path, notice: "that document doesn't exist."
 			end

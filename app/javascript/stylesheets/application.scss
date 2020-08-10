@@ -211,6 +211,8 @@
 }
 
 .trix-content {
+  @apply h-screen; 
+  
   .attachment-gallery {
     > action-text-attachment,
     > .attachment {

@@ -1,7 +1,7 @@
 class Draft < ApplicationRecord
   belongs_to :user
   belongs_to :project
-  has_many :notes
+  has_many :documents
 
   def self.create_draft(user, project)
     @draft = Draft.new
@@ -9,9 +9,17 @@ class Draft < ApplicationRecord
     @draft.project = project
     @draft.save!
 
-    # create a new blank note to be included with the draft
-    @note = Note.new(name: 'main', draft_id: @draft.id, user_id: user.id, body: '')
-    @note.save!
+    # create a document to be included with the draft
+    document_params = {
+      user_id: user.id,
+      draft_id: @draft.id
+    }
+
+    
+    @document = Document.new(document_params)
+    puts @draft.inspect
+    puts @document.inspect
+    @document.save!
     return @draft
   end
 end

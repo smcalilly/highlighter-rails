@@ -1,7 +1,10 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
   include Tagger
   include Markdownable
+  include Draftable
+  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_draft, only: [:show, :edit, :update, :destroy]
+  before_action :set_documents, only: [:show, :edit, :update, :destroy]
 
   def index
     @projects = policy_scope(Project).all
@@ -71,7 +74,6 @@ class ProjectsController < ApplicationController
       return @project
     end
 
-    # Only allow a list of trusted parameters through.
     def project_params
       params.require(:project).permit(:title, :tag_list)
     end

@@ -24,10 +24,13 @@
 - devise sign  up redirect bug (just like the sign in bug)
 - does devise "remember me" work?
 
+- authorization for project, draft, and documents
+
 
 ### huh?
 - wtf is up with my cors? how is that not throwing errors?
 - how efficient is the database, especially the tags? so many loads when home page is requested
+- it is probably wrong to have user foreign key with every single model, esp. the ones (children) with (parent) associations
 
 ### UX/UI
 - marketing to about...can't access it when logged in bc of the way my authentication is setup
