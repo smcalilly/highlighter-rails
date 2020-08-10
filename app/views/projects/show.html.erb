@@ -2,31 +2,34 @@
   <h1 class='text-2xl font-bold'><%= @project.title %></h1>
   <%= link_to 'edit', edit_project_path, class: 'text-red-300' %>
 </div>
-<div class='flex items-center justify-center flex-col mt-4'>
-  <div class='flex flex-row items-center justify-center'>
-    Tags:
+
+<div class='flex items-center justify-center flex-row mt-4'>
+  <div class='flex flex-col w-1/3'>
+    <div class='flex flex-row items-center justify-center'>
+      Tags:
+      <ul>
+        <% @project.tags.each do |tag| %>
+          <%= render 'tags/tag', :tag => tag %>
+        <% end %>
+      </ul>
+    </div>
+
     <% @project.tags.each do |tag| %>
-      <%= render 'tags/tag', :tag => tag %>
+      <ul class='w-2/3'>
+        <% tag.notes.each do |note| %>
+          <%= render 'notes/note_preview', :note => note %>
+        <% end %>
+      </ul>
+
+      <ul class='w-2/3'>
+        <% tag.highlights.each do |highlight| %>
+          <%= link_to highlight.text, highlight_path(highlight) %>
+        <% end %>
+      </ul>
     <% end %>
   </div>
 
-  <div class='flex flex-row items-center justify-center'>
-    <% @project.draft.notes.each do |note| %>
-      <%= render 'notes/note_preview', :note => note %>
-    <% end %>
+  <div>
+    <%= render 'documents/form', :document => @project.draft.documents.first %>
   </div>
-
-  <% @project.tags.each do |tag| %>
-    <% tag.notes.each do |note| %>
-      <div class='w-2/3'>
-        <%= render 'notes/note_preview', :note => note %>
-      </div>
-    <% end %>
-
-    <% tag.highlights.each do |highlight| %>
-      <div class='w-2/3'>
-        <%= link_to highlight.text, highlight_path(highlight) %>
-      </div>
-    <% end %>
-  <% end %>
 </div>

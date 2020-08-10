@@ -1,0 +1,15 @@
+<div class='flex justify-end'>
+  <div class='m-8 bg-white p-8'>
+    <%= form_with(model: document) do |form| %>
+      <%= puts 'form' %>
+      <%= puts document %>
+      <div class="field">
+        <%= form.rich_text_area :content %>
+      </div>
+
+      <div class='text-center mt-8'>
+        <%= form.submit 'save', class: 'btn-pink' %>
+      </div>
+    <% end %>
+  </div>
+</div>

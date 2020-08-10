@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_31_195816) do
+ActiveRecord::Schema.define(version: 2020_08_09_052436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,15 @@ ActiveRecord::Schema.define(version: 2020_07_31_195816) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_assortments_on_user_id"
+  end
+
+  create_table "documents", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.bigint "draft_id", null: false
+    t.index ["draft_id"], name: "index_documents_on_draft_id"
+    t.index ["user_id"], name: "index_documents_on_user_id"
   end
 
   create_table "drafts", force: :cascade do |t|
@@ -144,6 +153,8 @@ ActiveRecord::Schema.define(version: 2020_07_31_195816) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "assortments", "users"
+  add_foreign_key "documents", "drafts"
+  add_foreign_key "documents", "users"
   add_foreign_key "drafts", "projects"
   add_foreign_key "drafts", "users"
   add_foreign_key "highlights", "sources"

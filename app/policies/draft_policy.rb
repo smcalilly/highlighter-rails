@@ -1,4 +1,4 @@
-class TagPolicy < ApplicationPolicy
+class DraftPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       if user.present?
@@ -20,15 +20,15 @@ class TagPolicy < ApplicationPolicy
   end
 
   def update?
-    return true if user.present? && user == Tag.where(user_id: user.id)
+    return true if user.present? && user == draft.user
   end
 
   def destroy?
-    return true if user.present? && user == tag.user
+    return true if user.present? && user == draft.user
   end
 
   private
-  def tag
+  def draft
     record
   end
 end

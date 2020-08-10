@@ -10,4 +10,5 @@ class User < ApplicationRecord
   has_many :assortments
   has_many :projects
   has_many :drafts
+  has_many :documents
 end

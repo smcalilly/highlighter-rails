@@ -22,8 +22,11 @@ Visit www.highlighter.online.
   A project is a writing project. It's a text editor with version control, plus a file system to improve the workflow. It allows a user to add tags to the project, which will automatically include any piece of content with the tag. Since a user can add any Note, Highlight, or Source to a project, and not just stuff with tags, the user is not bound to certain tags for a project, but typically tags are thematic to the project. A project has one draft.
   - `#<Project id: nil, title: nil, created_at: nil, updated_at: nil, user_id: nil>`
 ### Draft
-  A draft is a project's working document. It has version control. It has many notes.
+  A draft is a project's working document. It has version control. It has many documents.
   - `#<Draft id: nil, created_at: nil, updated_at: nil, user_id: nil, project_id: nil>`
+### Document
+  A document belongs to a draft and a draft can have many documents. Currently, it's using Rail's built-in Action Text with their Trix editor. Since Action Text is rich text and we want markdown, a future version will need it's own markdown editor based on a generic text model. Will need to refactor the Note model to use this generic text, too.
+  - `#<Document id: 2, created_at: "2020-08-09 19:43:44", updated_at: "2020-08-09 19:43:51", user_id: 1, draft_id: 8>`  
 ### Assortment
   An assortment is a combination of tags. It's a way to combine related or unrelated pieces of content. It's meant to be a well to draw upon when writing or learning or whatever. This might typically be called a "Category," but the current name is Assortment.
   - `#<Assortment id: nil, name: nil, created_at: nil, updated_at: nil, user_id: nil>`
@@ -101,5 +104,5 @@ polymorphism: https://cobwwweb.com/rails-has-many-through-polymorphic-associatio
 
 - turbolink weirdness causing [redirect to get stuck loading after sign in](https://stackoverflow.com/questions/62499186/devise-redirect-to-on-successful-login-seems-to-get-stuck-on-first-login-attempt)
 
-- more rails weirdness https://stackoverflow.com/questions/31857365/rails-generate-commands-hang-when-trying-to-create-a-model
+- **don't do this!** more rails weirdness https://stackoverflow.com/questions/31857365/rails-generate-commands-hang-when-trying-to-create-a-model
 after resetting bin, you'll need to do `$ bundle exec rails webpacker:binstubs`

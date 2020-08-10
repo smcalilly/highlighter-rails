@@ -29,4 +29,5 @@ Rails.application.routes.draw do
   resources :tags
   resources :assortments
   resources :projects
+  resources :documents
 end

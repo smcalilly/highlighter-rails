@@ -20,11 +20,11 @@ class ProjectPolicy < ApplicationPolicy
   end
 
   def update?
-    return true if user.present? && user == assortment.user
+    return true if user.present? && user == project.user
   end
 
   def destroy?
-    return true if user.present? && user == assortment.user
+    return true if user.present? && user == project.user
   end
 
   private
