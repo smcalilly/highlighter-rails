@@ -7,6 +7,7 @@
 
 - https://github.com/rails/webpacker/issues/2288
 - purgecss to remove unused tailwind
+- upgrade to ruby 2.7
 
 - time display is wrong time zone
 - html input active when visting page
@@ -23,8 +24,6 @@
 
 - devise sign  up redirect bug (just like the sign in bug)
 - does devise "remember me" work?
-
-- authorization for project, draft, and documents
 
 
 ### huh?
