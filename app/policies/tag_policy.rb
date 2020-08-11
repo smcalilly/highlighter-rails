@@ -20,7 +20,7 @@ class TagPolicy < ApplicationPolicy
   end
 
   def update?
-    return true if user.present? && user == Tag.where(user_id: user.id)
+    return true if user.present? && user == tag.user
   end
 
   def destroy?

@@ -37,6 +37,7 @@ class NotesController < ApplicationController
   def update
     @tags = find_or_create_tags(note_params, current_user.id)
     @note.tags = @tags
+    authorize @note
 
     respond_to do |format|
       if @note.update(note_params)

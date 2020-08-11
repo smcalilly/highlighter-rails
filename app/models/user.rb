@@ -11,4 +11,5 @@ class User < ApplicationRecord
   has_many :projects
   has_many :drafts
   has_many :documents
+  has_many :tags
 end

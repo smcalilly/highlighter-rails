@@ -40,7 +40,7 @@ Visit www.highlighter.online.
 ## heroku commands
 `heroku logs --tail --app=high-lighter`  
 `heroku run rails console`   
-`heroku run rake db:migrate` (need to move this to a procfile)  
+`heroku run rake db:migrate` (need to move this to a build script)  
 `heroku config:set GITHUB_USERNAME=me`  
 
 ## development stuff
