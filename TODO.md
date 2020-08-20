@@ -44,8 +44,9 @@
 - sources -- add tags to form
 - sources preview too short. how to make that better? title field?
 - style forgot password form
-- 2fa
+- 2fa (https://github.com/tinfoil/devise-two-factor)
 - improve user mailer text and html
+- more legit mailer? https://medium.com/@cheney.shreve/using-devise-with-gmail-sendgrid-rails-and-heroku-tips-to-save-time-debugging-626546118358
 
 ### features
 - add all the crud actions to the tags?

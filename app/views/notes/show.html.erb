@@ -16,3 +16,56 @@
 </div>
 
 <%= react_component('Editor') %>
+
+<script src="https://prosemirror.net/examples/prosemirror.js"></script>
+<script>
+  function require(name) {
+  let id = /^prosemirror-(.*)/.exec(name), mod = id && PM[id[1].replace(/-/g, "_")]
+  if (!mod) throw new Error(`Library basic isn't loaded`)
+  return mod
+  }
+
+  const {EditorState} = require("prosemirror-state")
+const {EditorView} = require("prosemirror-view")
+const {Schema, DOMParser} = require("prosemirror-model")
+const {schema} = require("prosemirror-schema-basic")
+const {addListNodes} = require("prosemirror-schema-list")
+const {exampleSetup} = require("prosemirror-example-setup")
+
+// Mix the nodes from prosemirror-schema-list into the basic schema to
+// create a schema with list support.
+const mySchema = new Schema({
+  nodes: addListNodes(schema.spec.nodes, "paragraph block*", "block"),
+  marks: schema.spec.marks
+})
+
+window.view = new EditorView(document.querySelector("#editor"), {
+  state: EditorState.create({
+    doc: DOMParser.fromSchema(mySchema).parse(document.querySelector("#content")),
+    plugins: exampleSetup({schema: mySchema})
+  })
+})
+
+
+</script>
+
+<div id=editor style="margin-bottom: 23px"></div>
+
+<div style="display: none" id="content">
+  <h3>Hello ProseMirror</h3>
+
+  <p>This is editable text. You can focus it and start typing.</p>
+
+  <p>To apply styling, you can select a piece of text and manipulate
+  its styling from the menu. The basic schema
+  supports <em>emphasis</em>, <strong>strong
+  text</strong>, <a href="http://marijnhaverbeke.nl/blog">links</a>, <code>code
+  font</code>, and  images.</p>
+
+  <p>Block-level structure can be manipulated with key bindings (try
+  ctrl-shift-2 to create a level 2 heading, or enter in an empty
+  textblock to exit the parent block), or through the menu.</p>
+
+  <p>Try using the “list” item in the menu to wrap this paragraph in
+  a numbered list.</p>
+</div>
