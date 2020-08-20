@@ -24,6 +24,7 @@
 
 - devise sign  up redirect bug (just like the sign in bug)
 - does devise "remember me" work?
+- sign in error has no feedback
 
 
 ### huh?

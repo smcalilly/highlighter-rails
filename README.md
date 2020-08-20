@@ -3,7 +3,7 @@ Hi-Writer is an app for your messy brain. It is a writing tool with version cont
 
 In tech speak, it's a text editor for writers with a file system-like workflow and version control.
 
-Visit www.highlighter.online.
+Visit www.highlighter.online to sign up, or [demo V1 of the markdown text editor here](https://www.highlighter.online/editor).
 
 ## Models
 ### Tag
