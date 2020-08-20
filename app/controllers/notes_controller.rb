@@ -21,7 +21,9 @@ class NotesController < ApplicationController
   end
 
   def create
-    @note = create_note
+    @tags = find_or_create_tags(note_params, current_user.id)
+    @note = Note.create_note(note_params, current_user, @tags)
+    authorize @note
 
     respond_to do |format|
       if @note.save
@@ -67,19 +69,16 @@ class NotesController < ApplicationController
     end
 
     # i don't know how else to add the user id to a callback in the note model
-    def create_note
-      @tags = find_or_create_tags(note_params, current_user.id)
+    # def create_note
+    #   @tags = find_or_create_tags(note_params, current_user.id)
   
-      @note = Note.new(note_params)
-      @note.user = current_user
-      @note.tags = @tags
-      authorize @note
-      return @note
-    end
+    #   @note = Note.new(note_params)
+    #   @note.user = current_user
+    #   @note.tags = @tags
+      
+    #   return @note
+    # end
 
-    
-
-    # Only allow a list of trusted parameters through.
     def note_params
       params.require(:note).permit(:user_id, :body, :content, :tag_list)
     end
