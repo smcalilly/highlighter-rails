@@ -1,47 +1,48 @@
-<section class="highlight-box marketing">
+<div class="flex flex-col items-center">
+  <section class="highlight-box marketing">
 
-  <header>
-  <h2 class="text-align-center no-margin-top rejoice">Welcome to Highlighter</h2>
-  </header>
-  <p>If you haven't downloaded the browser extension, then this app won't be useful for you. So first, download:</p>
-    <ul>
-      <li><a href="https://addons.mozilla.org/en-US/firefox/addon/highlighter-online/">Highlighter for Firefox</a></li>
-      <li><a href="https://chrome.google.com/webstore/detail/highlighter/jhbdfidbplpijoncnlfooepldoleioga">Highlighter for Chrome</a></li>
-    </ul>
-  <p>The browser extension you just downloaded supplements this web app (<a href='https://highlighter.online'>highlighter.online</a>). The username and password you just created is used for both. Any highlight you save with your extension is available at this web app. 
-  <p>You've already created your account, but you're only logged into <a href='https://highlighter.online'>highlighter.online</a> and <strong>not the Highlighter browser extension you just downloaded.</strong> So now you need to log into the extension. </p>
-  
-</section>
+    <header>
+    <h2 class="text-align-center rejoice mb-8 text-4xl font-bold">Welcome to Highlighter</h2>
+    </header>
+    <p class="mt-4">If you haven't downloaded the browser extension, then this app won't be useful for you. So first, download:</p>
+      <ul class="text-align-center mt-4">
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/highlighter-online/">Highlighter for Firefox</a></li>
+        <li class="mt-4"><a href="https://chrome.google.com/webstore/detail/highlighter/jhbdfidbplpijoncnlfooepldoleioga">Highlighter for Chrome</a></li>
+      </ul>
+    <p class="mt-4">The browser extension you just downloaded supplements this web app (<a href='https://highlighter.online'>highlighter.online</a>). The username and password you just created is used for both. Any highlight you save with your extension is available at this web app. 
+    <p class="mt-4">You've already created your account, but you're only logged into <a href='https://highlighter.online'>highlighter.online</a> and <strong>not the Highlighter browser extension you just downloaded.</strong> So now you need to log into the extension. </p>
+  </section>
 
-<section class="highlight-box">
-  <h2 class="rejoice text-align-center no-margin-top">Log in to the extension</h2>
-  <p>
-    At the top right corner of your browser, click the purple logo that says "Hi" and enter the username and password you created earlier.
-  </p>
-  <p>Once you've logged into the popup successfully, you can now save your highlights.</p>
-</section>
+  <section class="highlight-box">
+    <h2 class="text-center text-xl font-bold box-header py-2">Log in to the extension</h2>
+    <p class="mt-4">
+      At the top right corner of your browser, click the purple logo that says "Hi" and enter the username and password you created earlier.
+    </p>
+    <p class="mt-4">Once you've logged into the popup successfully, you can now save your highlights.</p>
+  </section>
 
-<section class="highlight-box">
-  <h2 class="rejoice text-align-center no-margin-top">How to save a highlight</h2>
-  <p class="no-margin-top">
-  Select text with your cursor, right click, and choose "Save Highlight".
-  </p>
-  <p class="no-margin-top">Test it out with some quotes:</p>
-  <blockquote>
-    It is certain, in any case, that ignorance, allied with power, is the most ferocious enemy justice can have. - James Baldwin
-  </blockquote>
-  <blockquote>
-    "She wished there was some place where she could go to hum it out loud. 
-    Some kind of music was too private to sing in a house cram fall of people. 
-    It was funny, too, how lonesome a person could be in a crowded house." 
-    - <em>The Heart Is A Lonely Hunter</em> by Carson McCullers
-  </blockquote>
-</section>
+  <section class="highlight-box">
+    <h2 class="text-center text-xl font-bold box-header py-2">How to save a highlight</h2>
+    <p class="mt-4">
+    Select text with your cursor, right click, and choose "Save Highlight".
+    </p>
+    <p class="mt-4">Test it out with some quotes:</p>
+    <blockquote class="mt-4">
+      It is certain, in any case, that ignorance, allied with power, is the most ferocious enemy justice can have. - James Baldwin
+    </blockquote>
+    <blockquote class="mt-4">
+      "She wished there was some place where she could go to hum it out loud. 
+      Some kind of music was too private to sing in a house cram fall of people. 
+      It was funny, too, how lonesome a person could be in a crowded house." 
+      - <em>The Heart Is A Lonely Hunter</em> by Carson McCullers
+    </blockquote>
+  </section>
 
-<section class="highlight-box">
-  <p class="no-margin-top">Much like you'd "highlight" text on a piece of paper, this action saves the highlight to a database so you can reference it later. You can access all of your highlights on the <a href='https://highlighter.online'>highlighter.online</a> web app (the website where you're reading this).</p>
-  <p>Any highlight you create will be visible in the popup whenever you visit the webpage from where the highlight originated.</p>
-  <div class='text-align-center continue'>
-    <%= link_to 'See My Highlights', highlights_path, :class => "big" %>
-  </div>
-</section>
+  <section class="highlight-box">
+    <p class="mt-4">Much like you'd "highlight" text on a piece of paper, this action saves the highlight to a database so you can reference it later. You can access all of your highlights on the <a href='https://highlighter.online'>highlighter.online</a> web app (the website where you're reading this).</p>
+    <p class="mt-4">Any highlight you create will be visible in the popup whenever you visit the webpage from where the highlight originated.</p>
+    <div class='text-align-center continue'>
+      <%= link_to 'see the app >', home_path, :class => "big" %>
+    </div>
+  </section>
+</div>
