@@ -10,7 +10,7 @@
     "@rails/webpacker": "^4.2.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "marked": "^1.1.1",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.25.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
